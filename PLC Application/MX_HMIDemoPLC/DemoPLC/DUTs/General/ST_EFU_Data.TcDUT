@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_EFU_Data" Id="{698e1ab4-8038-4bef-93be-2b4c2bd3e764}">
+    <Declaration><![CDATA[TYPE ST_EFU_Data :
+STRUCT
+	EFUInputs 	AT%I*	: ST_EFU_Inputs	;
+	EFUOutputs 	AT%Q*	: ST_EFU_Outputs;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

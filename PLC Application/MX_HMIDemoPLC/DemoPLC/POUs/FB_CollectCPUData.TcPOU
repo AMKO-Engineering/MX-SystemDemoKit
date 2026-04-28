@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_CollectCPUData" Id="{02ad8f84-0f29-478d-8375-c684dca63912}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_CollectCPUData
+VAR
+	bFirstCycle				: BOOL := TRUE;	// First cycle of Function Call
+	bExecuteRead 			: BOOL;
+	tPeriod 				: TIME := T#500MS ;
+
+	fbReadIPCTemperature 	: FB_IPCDiag_ReadParameterPeriodic 	;
+	
+	fbReadIPCUsage		 	: FB_IPCDiag_ReadParameterPeriodic 	;
+	tInterval				: TIME := T#0.5S ; // Read interval
+	
+	
+	stCPUData				: ST_CPUData ;
+	fbDiagRegister			: FB_IPCDiag_Register ;
+	
+	stTaskData				: ST_TaskData;
+	fbTcSyslatency			: TC_SysLatencyEx;
+	
+	arBuffer					: ARRAY [0..100] OF DINT ; 
+	
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Initiate IPC diagnostics register
+fbDiagRegister(bExecute := bFirstCycle);
+
+IF fbDiagRegister.bValid THEN 
+	bFirstCycle 	:= FALSE;
+	bExecuteRead 	:= TRUE; 
+END_IF
+
+// Read and process data
+mReadTemperatureData(); 
+mReadCPUUsageData();
+]]></ST>
+    </Implementation>
+    <Property Name="GetCPUData" Id="{ebd4c9e4-4031-4d7f-81d3-2831a538a4d9}">
+      <Declaration><![CDATA[PROPERTY PUBLIC GetCPUData : ST_CPUData]]></Declaration>
+      <Get Name="Get" Id="{42fd44c0-7ada-46c0-a401-554ca1225f19}">
+        <Declaration><![CDATA[]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[GetCPUData := stCPUData;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Property Name="GetTaskData" Id="{0d2cfdd8-ce72-40cd-a6f9-fa8b32c08fc3}">
+      <Declaration><![CDATA[PROPERTY PUBLIC GetTaskData : ST_TaskData]]></Declaration>
+      <Get Name="Get" Id="{f61014ac-833d-4ba0-95ca-5a6e0c898bb3}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[GetTaskData := stTaskData;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Method Name="mReadCPUUsageData" Id="{ee4a5b7b-951b-4495-89cb-c730a9f11c6c}">
+      <Declaration><![CDATA[METHOD PRIVATE mReadCPUUsageData : ST_CPUUsage
+VAR
+	nCPUUsage				: UINT ; // current cPU usage [%] 
+	TaskIndex		: DINT ; // current task index
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[// read temperature diagnostic data
+fbReadIPCUsage(
+	bEnable:= TRUE, 
+	eParameterKey:= E_IPCDiag_ParameterKey.CPU_Usage, 
+	tPeriod:= T#1S, 
+	fbRegister:= fbDiagRegister );
+
+fbTcSyslatency(bExecute := fbReadIPCUsage.bValid);
+	
+// Process data
+IF fbReadIPCUsage.bValid THEN 
+	fbReadIPCUsage.GetParameter(pBuffer := ADR(nCPUUsage), nBufferSize := SIZEOF(nCPUUsage)) ;
+	stCPUData.stUsageData.nCPUUsage		:= nCPUUsage;
+	stCPUData.stUsageData.nMaxCPUUsage 	:= MAX(nCPUUsage, stCPUData.stUsageData.nMaxCPUUsage);
+	stCPUData.stUsageData.nCPUOverload	:= nCPUUsage > stCPUData.stUsageData.nLimitCPUUsage;
+
+	TaskIndex := GETCURTASKINDEXEX();
+	stTaskData.CycleTime	:= _TaskInfo[TaskIndex].CycleTime / 10000.0; //convert 100ns to ms
+	stTaskData.LastExecTime	:= _TaskInfo[TaskIndex].LastExecTime / 10000.0; //convert 100ns to ms
+	stTaskData.SystemLatency:= fbTcSyslatency.nActual;
+END_IF
+
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="mReadTemperatureData" Id="{ff03ba25-3a5e-481d-b49c-83d14f12199d}">
+      <Declaration><![CDATA[METHOD PRIVATE mReadTemperatureData : ST_CPUTemperature 
+VAR
+	nCPUTemperature : INT ;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[// read temperature diagnostic data
+fbReadIPCTemperature(
+	bEnable:= bExecuteRead, 
+	eParameterKey:= E_IPCDiag_ParameterKey.CPU_Temp, 
+	tPeriod:= T#1S, 
+	fbRegister:= fbDiagRegister );
+	
+// Process data
+IF fbReadIPCTemperature.bValid THEN 
+	fbReadIPCTemperature.GetParameter(pBuffer := ADR(nCPUTemperature), nBufferSize := SIZEOF(nCPUTemperature)) ;
+	stCPUData.stTemperatureData.nCPUCurrentTemparature	:= nCPUTemperature;
+	stCPUData.stTemperatureData.nCPUMaximumTemperature	:= MAX(nCPUTemperature, stCPUData.stTemperatureData.nCPUMaximumTemperature);
+	stCPUData.stTemperatureData.bInThermalThrottling 	:= nCPUTemperature >= stCPUData.stTemperatureData.nCPUTemperatureLimit;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

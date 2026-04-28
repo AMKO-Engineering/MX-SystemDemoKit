@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_DemoMotion" Id="{3d83b273-ce4c-4e33-af43-4d1ea61be327}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK INTERNAL FB_DemoMotion
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	fMAXVELOCITY		: LREAL := 26000;//12000; // maximum motor velocity
+	fMaxAcceleration	: LREAL := 15000;// 302143; // Maximum Motor acceleration
+	fMaxDeceleration	: LREAL := 15000;// 302143; // Maximum Motor acceleration
+END_VAR
+VAR
+	// Organisational bits
+	tonEnebleDelay		: TON := (PT := T#5S); // On delay time between STO release and Enable
+	bCmdEnableMotion	: BOOL ; // command activate motion
+	bMotionEnabled		: BOOL ; // motion is in enabled state
+	fOverride			: LREAL	:= 100.0; // override factor (default = 100%)
+	
+	bSafety_Error					AT%I*	: BOOL ; // Safety has error
+	bSafety_STOFromPLC				AT%Q*	: BOOL ; // Sto releaste from PLC
+	bSafety_ErrorAckFromPLC			AT%Q*	: BOOL ; // Safety error acknowledge from PLC
+	
+//	bCmdStartDemo		: BOOL ; // command activate demo mode
+	rtStopDemoMode		: R_TRIG	; // Trigger for toggeling demo mode stop
+	bCmdStopDemoMode	: BOOL ; // command stop demo mode
+	bDemoModeActive		: BOOL ; // Demo mode is active
+
+	bCmdStartManualMode	: BOOL ; // command activate manual mode
+	bManualModeActive	: BOOL ; // Manual mode is active
+	tofManualTimeOut	: TOF := (PT := T#30S); // Timeout for manual commands, if no commands are given then demo mode will be reactivated 
+
+	ServoAxis			: AXIS_REF ; // Main servo axis
+
+	bSafety_OK	AT%I* 	: BOOL ; // Safety Ok 
+	// DemoMode
+	eDemoStep			: E_DemoSteps 	; // Motion demo stepper
+	eLastErrorStep		: E_DemoSteps	; // Active step when error occured
+	
+	//Parameters
+	fHomePos			: LREAL := 75; // Home position (offset)
+	
+	tPRSegmentLength	: TIME := T#300MS 	; // length of the pr segment
+	tSTSegmentLength	: TIME := T#300MS 	; // length of the ST segment
+	tBetweenHeartbeats	: TIME := T#1S	; // Time between hearbeats
+	
+	Par_ToHomePosition	: ST_PositionParameters :=(fTargetPos 	:= 0, 
+												fVelocity 		:= fMAXVELOCITY, 
+												fAcceleration 	:= fMaxAcceleration, 
+												fDeceleration 	:= fMaxDeceleration, 
+												fJerk 			:= 0,
+												eBuffermode		:= MC_BufferMode.MC_Aborting);
+
+	Par_ECGP1			: ST_PositionParameters :=(fTargetPos 	:= 30, 
+												fVelocity 		:= fMAXVELOCITY / 4, 
+												fAcceleration 	:= fMaxAcceleration / 10, 
+												fDeceleration 	:= fMaxDeceleration / 30, 
+												fJerk 			:= 0,
+												eBuffermode		:= MC_BufferMode.MC_Buffered);
+
+	Par_ECGP2			: ST_PositionParameters :=(fTargetPos 	:= 0, 
+												fVelocity 		:= fMAXVELOCITY / 3, 
+												fAcceleration 	:= fMaxAcceleration / 15,
+												fDeceleration 	:= fMaxDeceleration / 10, 
+												fJerk 			:= 0,
+												eBuffermode		:= MC_BufferMode.MC_Buffered);
+
+	Par_ECGQ			: ST_PositionParameters :=(fTargetPos 	:= -30, 
+												fVelocity 		:= fMAXVELOCITY / 2, 
+												fAcceleration 	:= fMaxAcceleration, 
+												fDeceleration 	:= fMaxDeceleration, 
+												fJerk 			:= 0,
+												eBuffermode		:= MC_BufferMode.MC_Buffered);
+
+	Par_ECGR			: ST_PositionParameters :=(fTargetPos 	:= 360, 
+												fVelocity 		:= fMAXVELOCITY, 
+												fAcceleration 	:= fMaxAcceleration, 
+												fDeceleration 	:= fMaxDeceleration, 
+												fJerk 			:= 0,
+												eBuffermode		:= MC_BufferMode.MC_Buffered);
+
+	Par_ECGS1			: ST_PositionParameters :=(fTargetPos 	:= -120, 
+												fVelocity 		:= fMAXVELOCITY, 
+												fAcceleration 	:= fMaxAcceleration, 
+												fDeceleration 	:= fMaxDeceleration, 
+												fJerk 			:= 0,
+												eBuffermode		:= MC_BufferMode.MC_Buffered);
+								
+	Par_ECGS2			: ST_PositionParameters :=(fTargetPos 	:= 0, 
+												fVelocity 		:= fMAXVELOCITY / 2, 
+												fAcceleration 	:= fMaxAcceleration, 
+												fDeceleration 	:= fMaxDeceleration, 
+												fJerk 			:= 0,
+												eBuffermode		:= MC_BufferMode.MC_Buffered);
+
+	Par_ECGT1			: ST_PositionParameters :=(fTargetPos 	:= 50, 
+												fVelocity 		:= fMAXVELOCITY / 4, 
+												fAcceleration 	:= fMaxAcceleration / 10, 
+												fDeceleration 	:= fMaxDeceleration / 30, 
+												fJerk 			:= 0,
+												eBuffermode		:= MC_BufferMode.MC_Buffered);
+
+	Par_ECGT2			: ST_PositionParameters :=(fTargetPos 	:= 0, 
+												fVelocity 		:= fMAXVELOCITY / 2, 
+												fAcceleration 	:= fMaxAcceleration / 10, 
+												fDeceleration 	:= fMaxDeceleration, 
+												fJerk 			:= 0,
+												eBuffermode		:= MC_BufferMode.MC_Buffered);
+ 
+	// Axis organizational functions
+	tonSegment 		: TON 		; // Timer between segments  
+	fbMCPower 		: MC_Power 	;
+	fbMCReset		: MC_Reset 	;
+
+	// Axis demoe Motion functions
+	stActiveStepCommandParameters	: ST_PositionParameters; // Paremeters forwarded by the (latest) Active step
+	bCmdExecuteMove		: BOOL 				; // Execute move command (Automatically switches between FBMoveAbsolute instances for queing)
+	reMoveAbsoluteActive: R_TRIG 			; // Triggers when one of the move Absolute functions becomes active 
+	bMoveAbsoluteDone	: BOOL				; // Move absolute command is done 
+	fbMCMoveAbsolute_1 		: MC_MoveAbsolute 	;
+	fbMCMoveAbsolute_2 		: MC_MoveAbsolute 	;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+OrganisationalFunctions();
+
+RunDemo();
+
+]]></ST>
+    </Implementation>
+    <Folder Name="Methods" Id="{63997cd6-c2fa-4307-b0f3-2aaf5ebd6eaa}" />
+    <Folder Name="Propperties" Id="{c423221d-2cb2-4501-a55f-f66b8d9ec6db}" />
+    <Property Name="DemoModeActive" Id="{8b3ce87d-cc2e-4460-a94c-08e573d8ccb0}" FolderPath="Propperties\">
+      <Declaration><![CDATA[PROPERTY DemoModeActive : bool]]></Declaration>
+      <Get Name="Get" Id="{6dff7461-bbd3-4afa-984e-0b1b882522bc}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[IF bCmdStopDemoMode AND bDemoModeActive THEN 
+	DemoModeActive := Global_Managed_Variables.Blink_Slow;	
+ELSIF bDemoModeActive THEN 
+	DemoModeActive := TRUE;	
+END_IF
+]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Property Name="ManualModeActive" Id="{13da38a0-223c-4af6-a65a-54cf8e7ae7ed}" FolderPath="Propperties\">
+      <Declaration><![CDATA[PROPERTY PUBLIC ManualModeActive : Bool]]></Declaration>
+      <Get Name="Get" Id="{a4e38272-9941-4f28-9f87-7793166fb771}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[ManualModeActive := bManualModeActive;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Method Name="OrganisationalFunctions" Id="{1f870b9d-c00f-4267-9deb-dd935e681c9f}" FolderPath="Methods\">
+      <Declaration><![CDATA[METHOD INTERNAL OrganisationalFunctions : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[// Release STO when Safety i opperational
+
+// For now, automatically reset the safety
+IF bSafety_Error THEN 
+	{warning 'add error message handling'}
+	bSafety_STOFromPLC 		:= FALSE;
+	bSafety_ErrorAckFromPLC := TRUE;
+ELSE
+	bSafety_STOFromPLC 		:= TRUE;
+	bSafety_ErrorAckFromPLC := FALSE;
+END_IF
+
+tonEnebleDelay(IN := bCmdEnableMotion OR bSafety_OK);
+
+fbMCPower(	Axis 			:= ServoAxis, 
+			Enable			:= tonEnebleDelay.Q,
+			Enable_Positive	:= TRUE,
+			Enable_Negative	:= TRUE,
+			Override		:= fOverride,
+			Status			=> bMotionEnabled,
+			Error			=>,
+			ErrorID			=>);
+			
+fbMCReset(	Axis 	:= ServoAxis);
+
+IF fbMCPower.Status THEN 
+	ServoAxis.ReadStatus();
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="RunDemo" Id="{3124c5d3-6492-4745-bbbc-b35248c7e4ec}" FolderPath="Methods\">
+      <Declaration><![CDATA[METHOD RunDemo : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[// Manual mode control
+
+// The following stepper is designed to mimick an ECG scan (Heartbeat) when looking at the position graph
+CASE eDemoStep OF
+	E_DemoSteps.Idle:
+		bDemoModeActive 	:= FALSE;		
+		bManualModeActive 	:= FALSE;		
+		IF bMotionEnabled THEN 
+			eDemoStep := E_DemoSteps.CheckForManualCommand;
+		END_IF
+	E_DemoSteps.CheckForManualCommand:
+		IF bCmdStartManualMode THEN 
+			bDemoModeActive 	:= FALSE;
+			bCmdStopDemoMode 	:= FALSE;
+			eDemoStep := E_DemoSteps.ManualModeInit;
+		ELSIF bCmdStopDemoMode THEN 
+			bDemoModeActive := FALSE;// Stay idle and wait for further command
+		ELSIF bDemoModeActive THEN 
+			eDemoStep := E_DemoSteps.ECG_P1;
+		ELSE
+			eDemoStep := E_DemoSteps.MoveToHomePos;
+		END_IF
+	// this section is only used when swithcing from manual to demo mode
+	E_DemoSteps.MoveToHomePos:
+		stActiveStepCommandParameters := Par_ToHomePosition;
+		IF reMoveAbsoluteActive.Q OR bMoveAbsoluteDone THEN // Wait until the command is executed then move to next step
+			eDemoStep := E_DemoSteps.WaitForhoming;
+		ELSIF ServoAxis.NcToPlc.ActPos > -0.5 AND ServoAxis.NcToPlc.ActPos < 0.5 THEN // Servo is already at home position
+			eDemoStep := E_DemoSteps.ECGModeInit;
+			bCmdExecuteMove := FALSE;					
+		ELSE
+			bCmdExecuteMove := TRUE;					
+		END_IF
+	E_DemoSteps.WaitForhoming:
+		IF bMoveAbsoluteDone THEN 
+			eDemoStep := E_DemoSteps.ECGModeInit;
+		END_IF
+	E_DemoSteps.ECGModeInit:
+		IF NOT ServoAxis.Status.Error THEN 
+			bDemoModeActive := TRUE;
+			eDemoStep := E_DemoSteps.ECG_P1;
+		ELSE 
+			eLastErrorStep := eDemoStep;
+			eDemoStep := E_DemoSteps.Error;
+	END_IF
+	// Demo mode Creates ECG image on position scope
+	E_DemoSteps.ECG_P1:
+		stActiveStepCommandParameters := Par_ECGP1;
+		IF reMoveAbsoluteActive.Q THEN // Wait until the command is executed then move to next step
+			eDemoStep := E_DemoSteps.ECG_P2;
+		ELSE
+			bCmdExecuteMove := TRUE;		
+		END_IF
+	E_DemoSteps.ECG_P2:
+		stActiveStepCommandParameters := Par_ECGP2;
+		IF reMoveAbsoluteActive.Q THEN
+			eDemoStep := E_DemoSteps.ECG_PRSegment;
+		ELSE
+			bCmdExecuteMove := TRUE;		
+		END_IF			
+	E_DemoSteps.ECG_PRSegment:
+		IF tonSegment.Q THEN
+			tonSegment.IN := FALSE;
+			eDemoStep := E_DemoSteps.ECG_Q;			
+		ELSIF bMoveAbsoluteDone THEN 
+			tonSegment.PT := tPRSegmentLength ; 
+			tonSegment.IN := TRUE;
+		END_IF
+	E_DemoSteps.ECG_Q:
+		stActiveStepCommandParameters := Par_ECGQ;
+		IF reMoveAbsoluteActive.Q THEN
+			eDemoStep := E_DemoSteps.ECG_R;
+		ELSE
+			bCmdExecuteMove := TRUE;		
+		END_IF			
+	E_DemoSteps.ECG_R:
+		stActiveStepCommandParameters := Par_ECGR;
+		IF reMoveAbsoluteActive.Q THEN
+			eDemoStep := E_DemoSteps.ECG_S1;
+		ELSE
+			bCmdExecuteMove := TRUE;		
+		END_IF			
+	E_DemoSteps.ECG_S1:
+		stActiveStepCommandParameters := Par_ECGS1;
+		IF reMoveAbsoluteActive.q THEN
+			eDemoStep := E_DemoSteps.ECG_S2;
+		ELSE
+			bCmdExecuteMove := TRUE;		
+		END_IF			
+	E_DemoSteps.ECG_S2:
+		stActiveStepCommandParameters := Par_ECGS2;
+		IF reMoveAbsoluteActive.q THEN
+			eDemoStep := E_DemoSteps.Ecg_STSegment;
+		ELSE
+			bCmdExecuteMove := TRUE;		
+		END_IF			
+	E_DemoSteps.Ecg_STSegment:
+		IF tonSegment.Q THEN
+			tonSegment.IN := FALSE;
+			eDemoStep := E_DemoSteps.ECG_T1;			
+		ELSIF bMoveAbsoluteDone THEN 
+			tonSegment.PT := tSTSegmentLength ; 
+			tonSegment.IN := TRUE;
+		END_IF
+	E_DemoSteps.ECG_T1:
+		stActiveStepCommandParameters := Par_ECGT1;
+		IF reMoveAbsoluteActive.Q THEN 
+			eDemoStep := E_DemoSteps.ECG_T2;
+		ELSE
+			bCmdExecuteMove := TRUE;		
+		END_IF
+	E_DemoSteps.ECG_T2:
+		stActiveStepCommandParameters := Par_ECGT2;
+		IF reMoveAbsoluteActive.Q THEN
+			eDemoStep := E_DemoSteps.ECG_Idle;
+		ELSE
+			bCmdExecuteMove := TRUE;		
+		END_IF			
+	E_DemoSteps.ECG_Idle:
+		IF tonSegment.Q THEN
+			tonSegment.IN := FALSE;
+			eDemoStep := E_DemoSteps.CheckForManualCommand;		// End of ECG cycle, Return	
+		ELSIF bMoveAbsoluteDone THEN 
+			tonSegment.PT :=  tBetweenHeartbeats; 
+			tonSegment.IN := TRUE;
+		END_IF
+	// Manual control
+	E_DemoSteps.ManualModeInit:
+		IF NOT ServoAxis.Status.Error AND not ServoAxis.Status.HasJob THEN 
+			bCmdStartManualMode := FALSE;
+			bManualModeActive := TRUE;
+			eDemoStep := E_DemoSteps.ManualMode;
+		ELSIF ServoAxis.Status.Error THEN 
+			eDemoStep := E_DemoSteps.Error;
+			{warning 'error message needs to be added'}
+		END_IF
+	E_DemoSteps.ManualMode:
+		tofManualTimeOut.in := TRUE;
+		IF NOT ServoAxis.Status.HasJob THEN 
+			eDemoStep := E_DemoSteps.ManualIdle;
+		END_IF
+	E_DemoSteps.ManualIdle:
+		tofManualTimeOut.IN := FALSE;
+		IF ServoAxis.Status.HasJob THEN 
+			eDemoStep := E_DemoSteps.ManualMode;
+		ELSIF NOT tofManualTimeOut.q THEN // If no manual command is given, return to home position in order to start ECG again
+			bManualModeActive := FALSE;
+			eDemoStep := E_DemoSteps.MoveToHomePos;
+		ELSIF NOT bManualModeActive THEN
+			eDemoStep := E_DemoSteps.MoveToHomePos;
+		END_IF
+	// Housekeeping
+	E_DemoSteps.Error:
+		{warning 'add error handling'}
+		bCmdExecuteMove := FALSE;
+		IF ServoAxis.Status.Error THEN 
+			fbMCReset.Execute := TRUE;
+		ELSE
+			fbMCReset.Execute := FALSE;
+			eDemoStep := E_DemoSteps.Idle;
+		END_IF
+END_CASE
+
+tonSegment();
+tofManualTimeOut();
+
+// Execute move absolute functions
+// Move absolute commands can be stacked ensuring quick transitions and easy coding
+fbMCMoveAbsolute_1( Execute		:= NOT fbMCMoveAbsolute_1.Busy AND bCmdExecuteMove,	
+					Axis 		:= ServoAxis,
+					Position	:= fHomePos + stActiveStepCommandParameters.fTargetPos,
+					Velocity	:= stActiveStepCommandParameters.fVelocity,
+					Acceleration:= stActiveStepCommandParameters.fAcceleration,
+					Deceleration:= stActiveStepCommandParameters.fDeceleration,
+					Jerk		:= stActiveStepCommandParameters.fJerk,
+					BufferMode	:= stActiveStepCommandParameters.eBuffermode
+					);
+fbMCMoveAbsolute_2( Execute		:= fbMCMoveAbsolute_1.Busy AND bCmdExecuteMove,
+					Axis 		:= ServoAxis,
+					Position	:= fHomePos + stActiveStepCommandParameters.fTargetPos,
+					Velocity	:= stActiveStepCommandParameters.fVelocity,
+					Acceleration:= stActiveStepCommandParameters.fAcceleration,
+					Deceleration:= stActiveStepCommandParameters.fDeceleration,
+					Jerk		:= stActiveStepCommandParameters.fJerk,
+					BufferMode	:= stActiveStepCommandParameters.eBuffermode
+					);
+
+reMoveAbsoluteActive(CLK := fbMCMoveAbsolute_1.Active OR fbMCMoveAbsolute_2.Active);
+bMoveAbsoluteDone	:= fbMCMoveAbsolute_1.Done OR fbMCMoveAbsolute_2.Done;
+
+IF reMoveAbsoluteActive.Q THEN 
+	bCmdExecuteMove := FALSE;
+ELSIF fbMCMoveAbsolute_1.Error OR fbMCMoveAbsolute_2.Error THEN 
+	eLastErrorStep := eDemoStep;
+	eDemoStep := E_DemoSteps.Error;
+END_IF
+
+{warning 'error message needs to be added'}
+
+]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="StartManualMode" Id="{267f1ae7-99e6-4b6c-8bc4-83d8f336c107}" FolderPath="Propperties\">
+      <Declaration><![CDATA[PROPERTY StartManualMode : Bool]]></Declaration>
+      <Set Name="Set" Id="{0dc23fba-8d63-4b6d-93c8-3a05d98365a8}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[// only starts the Manual mode, Manaul mode will stop automatically after 30Sec of no commands
+IF StartManualMode AND NOT bManualModeActive THEN
+	bCmdStartManualMode := TRUE;
+END_IF
+]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="StopDemoMode" Id="{06fa1fcc-de8c-40a3-9f9e-08699b0125ba}" FolderPath="Propperties\">
+      <Declaration><![CDATA[PROPERTY StopDemoMode : Bool]]></Declaration>
+      <Set Name="Set" Id="{2b6ef968-2e28-4de0-a3dd-8a01241c3870}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[// Demo needs to finish it's cycle before switching off, therefore the StopDemo command is triggered to bring the demo cycle to a controlled end
+rtStopDemoMode(CLK := StopDemoMode);
+IF rtStopDemoMode.Q THEN
+	IF bManualModeActive THEN // Then manual made is active, turn off Manual mode to resume demo mode
+		bManualModeActive 	:= FALSE;
+		bCmdStartManualMode	:= FALSE;
+	ELSE
+		bCmdStopDemoMode := NOT bCmdStopDemoMode;
+	END_IF
+END_IF]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+  </POU>
+</TcPlcObject>

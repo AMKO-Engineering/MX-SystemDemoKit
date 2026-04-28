@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_EFU_Device_Inputs" Id="{af30c600-8905-4fa0-bda9-b13270fc3224}">
+    <Declaration><![CDATA[TYPE ST_EFU_Device_Inputs :
+STRUCT
+	bError					: BOOL ;
+	bWarning				: BOOL ;
+	bUnderVoltage_Us		: BOOL ;
+	bUnderVoltage_Up		: BOOL ;
+	bOvertemperatureWarning	: BOOL ;
+	bDiag					: BOOL ;
+	fTotalCurrent			: REAL ;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <GVL Name="Global_Managed_Variables" Id="{13236581-66a9-4c59-a9e4-1f25e6ddbcf6}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	Blink_Slow 	: BOOL	; // Slow blinking bit
+	Blink_Fast	: BOOL	; // fast blinking Bit
+	
+END_VAR
+VAR_GLOBAL CONSTANT
+	ALWAYS_TRUE		: BOOL := TRUE	; // always true constant
+	ALWAYS_FALSE	: BOOL := FALSE	; // ALways false constant 
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

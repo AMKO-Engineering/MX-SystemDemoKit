@@ -1,0 +1,165 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "CPUTemperature": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\CPU\\CPUTemperature.usercontrol.json",
+      "id": "tchmi:project#/definitions/CPUTemperature",
+      "type": "object"
+    },
+    "UserControl1": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\PSU\\GraphWithAllarms.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/UserControl1"
+    },
+    "indicator": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\General\\indicator.usercontrol.json",
+      "id": "tchmi:project#/definitions/indicator",
+      "type": "object"
+    },
+    "GraphWithAllarms": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\PSUControls\\GraphWithAllarms.usercontrol.json",
+      "id": "tchmi:project#/definitions/GraphWithAllarms",
+      "type": "object"
+    },
+    "3lineGraphWithAllarm": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\General\\3lineGraphWithAllarm.usercontrol.json",
+      "id": "tchmi:project#/definitions/3lineGraphWithAllarm",
+      "type": "object"
+    },
+    "TextWithDataVariableAndUnit": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\General\\TextWithDataVariableAndUnit.usercontrol.json",
+      "id": "tchmi:project#/definitions/TextWithDataVariableAndUnit",
+      "type": "object"
+    },
+    "EhterCatAndPowerMonitor": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\EtherCAT\\Junction\\EhterCatAndPowerMonitor.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/EhterCatAndPowerMonitor"
+    },
+    "GraphWithAllarms_0": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\PSU\\GraphWithAllarms.usercontrol.json",
+      "id": "tchmi:project#/definitions/GraphWithAllarms_0",
+      "type": "object"
+    },
+    "GraphWithAllarms_1": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\PSU\\GraphWithAllarms.usercontrol.json",
+      "id": "tchmi:project#/definitions/GraphWithAllarms_1",
+      "type": "object"
+    },
+    "GraphWithAllarms_2": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\PSU\\GraphWithAllarms.usercontrol.json",
+      "id": "tchmi:project#/definitions/GraphWithAllarms_2",
+      "type": "object"
+    },
+    "GraphWithAllarms_3": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\PSU\\GraphWithAllarms.usercontrol.json",
+      "id": "tchmi:project#/definitions/GraphWithAllarms_3",
+      "type": "object"
+    },
+    "GraphWithAllarms_4": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\PSU\\GraphWithAllarms.usercontrol.json",
+      "id": "tchmi:project#/definitions/GraphWithAllarms_4",
+      "type": "object"
+    },
+    "GraphWithAllarms_5": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\PSU\\GraphWithAllarms.usercontrol.json",
+      "id": "tchmi:project#/definitions/GraphWithAllarms_5",
+      "type": "object"
+    },
+    "GraphWithAllarms_6": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\PSU\\GraphWithAllarms.usercontrol.json",
+      "id": "tchmi:project#/definitions/GraphWithAllarms_6",
+      "type": "object"
+    },
+    "GraphWithAllarms_7": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\PSU\\GraphWithAllarms.usercontrol.json",
+      "id": "tchmi:project#/definitions/GraphWithAllarms_7",
+      "type": "object"
+    },
+    "GraphWithAllarms_8": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\PSU\\GraphWithAllarms.usercontrol.json",
+      "id": "tchmi:project#/definitions/GraphWithAllarms_8",
+      "type": "object"
+    },
+    "GraphWithAllarms_9": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\PSU\\GraphWithAllarms.usercontrol.json",
+      "id": "tchmi:project#/definitions/GraphWithAllarms_9",
+      "type": "object"
+    },
+    "GraphWithAllarms_10": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\PSU\\GraphWithAllarms.usercontrol.json",
+      "id": "tchmi:project#/definitions/GraphWithAllarms_10",
+      "type": "object"
+    },
+    "GraphWithAllarms_11": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\PSU\\GraphWithAllarms.usercontrol.json",
+      "id": "tchmi:project#/definitions/GraphWithAllarms_11",
+      "type": "object"
+    },
+    "RectangularButtonWithFeedback": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Pages\\MXDemo\\Modules\\General\\RectangularButtonWithFeedback.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/RectangularButtonWithFeedback"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_CPUUsage" Id="{169aa68d-d34a-4eaa-8cd7-e9c2c645b7da}">
+    <Declaration><![CDATA[TYPE ST_CPUUsage :
+STRUCT
+	nCPUUsage			: UINT 	; // CPU usage (%)
+	nMaxCPUUsage		: UINT	; // maximum cpu usage measured since last powerup
+	nLimitCPUUsage		: UINT	:= 80; // Critical level for CPU usage
+	nCPUOverload		: BOOL	; // CPU maximum use exceeded 
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

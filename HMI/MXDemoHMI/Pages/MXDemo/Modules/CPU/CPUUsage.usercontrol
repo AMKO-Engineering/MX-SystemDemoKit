@@ -1,0 +1,72 @@
+<div id="CPUTemperature_3" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="282" data-tchmi-width-unit="%" data-tchmi-height-unit="px" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500">
+
+<div id="CPUTemperatureGauge_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRadialGauge" data-tchmi-base-animation-time="1000" data-tchmi-decimal-digits="0" data-tchmi-gauge-alignment="Center" data-tchmi-label-range="20" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-show-labels="True" data-tchmi-show-ticks="True" data-tchmi-show-value-text="True" data-tchmi-start-from-zero="True" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-unit="℃">
+<script data-tchmi-target-attribute="data-tchmi-tick-definition" type="application/json">
+{
+  "mainTickRange": 20,
+  "subTickRange": 5
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-range" type="application/json">
+[
+  {
+    "color": {
+      "color": "rgba(0, 128, 0, 1)"
+    },
+    "start": 0.0,
+    "end": 0.0
+  },
+  {
+    "color": {
+      "color": "rgba(248, 248, 0, 0.9803921)"
+    },
+    "start": 70.0,
+    "end": 90.0
+  },
+  {
+    "color": {
+      "color": "rgba(232, 12, 12, 1)"
+    },
+    "start": 90.0,
+    "end": 100.0
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-markers" type="application/json">
+[
+  {
+    "color": {
+      "color": "rgba(249, 8, 8, 1)"
+    },
+    "label": "Limit",
+    "value": 90.0
+  },
+  {
+    "color": {
+      "color": "rgba(248, 248, 0, 0.9803921)"
+    },
+    "label": "Max",
+    "value": 0
+  }
+]
+</script>
+</div>
+<div id="ThrottlingIndicator_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height="20" data-tchmi-height-unit="%" data-tchmi-width="30" data-tchmi-width-unit="%" data-tchmi-right-unit="%" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-bottom="0">
+<div id="TcHmiIndicatorLight_2" data-tchmi-type="TcHmi.Controls.Beckhoff.Industries.Common.TcHmiIndicatorLight" data-tchmi-right="5" data-tchmi-bottom="5" data-tchmi-top="5" data-tchmi-top-unit="%" data-tchmi-right-unit="%" data-tchmi-bottom-unit="%" data-tchmi-left="90">
+</div>
+<div id="TcHmiTextbox_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-horizontal-scroll="Auto" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-reset-to-last-valid-value="True" data-tchmi-text="Throttling" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-vertical-scroll="Auto" data-tchmi-right-unit="%" data-tchmi-bottom-unit="%" data-tchmi-right="40" data-tchmi-bottom="0" data-tchmi-text-font-size-unit="%" data-tchmi-text-font-size="100">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+</div>
+</div>

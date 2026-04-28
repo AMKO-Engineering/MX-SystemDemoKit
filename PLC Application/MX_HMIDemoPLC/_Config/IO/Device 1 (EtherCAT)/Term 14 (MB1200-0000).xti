@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.20" ClassName="CFlbTermDef" SubType="9099">
+	<ImageDatas>
+		<ImageData Id="1000">424dd6020000000000003600000028000000100000000e000000010018000000000000000000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000ff00ff000000000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ff000000ff00ff000000ff00ff000000ff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ff000000ff00ff000000ff00ff000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000000000000000000000000000ff00ff000000ff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000000000ff00ff000000000000ff00ff000000000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffa4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0ff00ffff00ff0000ffa4a0a0000000a4a0a0000000a4a0a0000000a4a0a0000000a4a0a0000000a4a0a0000000a4a0a0ff00ffff00ff0000ffa4a0a0000000a4a0a0000000a4a0a0000000a4a0a0000000a4a0a0000000a4a0a0000000a4a0a0ff00ffff00ff0000ffa4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0ff00ffff00ffa4a0a0a4a0a0000000a4a0a0000000a4a0a0000000a4a0a0000000a4a0a0000000a4a0a0000000a4a0a0ff00ffff00ffa4a0a0a4a0a0000000a4a0a0000000a4a0a0000000a4a0a0000000a4a0a0000000a4a0a0000000a4a0a0ff00ffff00ffa4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0a4a0a0ff00ff</ImageData>
+	</ImageDatas>
+	<Box Id="7" BoxType="9099">
+		<Name>__FILENAME__</Name>
+		<ImageId>1000</ImageId>
+		<EtherCAT CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x04b008d2" InfoDataState="false" PortPhys="49" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="MB1200-0000 MX EtherCAT infeed" Desc="MB1200-0000">
+			<BackplaneModule Type="MX" DeviceType="1" Width="2" Height="1" BackplanePort="1"/>
+		</EtherCAT>
+		<Box File="Term 8 (MB1100-0002).xti" Id="8">
+			<EtherCAT PortABoxInfo="#x01000007"/>
+		</Box>
+		<Box File="Term 25 (MS1110-0000).xti" Id="25">
+			<EtherCAT PortABoxInfo="#x02000008"/>
+		</Box>
+	</Box>
+</TcSmItem>

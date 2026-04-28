@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_BleutoothControl" Id="{f1b73aa4-1f95-4fe5-8fe0-b057c116e6c5}">
+    <Declaration><![CDATA[TYPE ST_BleutoothControl :
+STRUCT
+	EnableBleutoothDiagnosis	: BOOL;
+	ActivatePairingMode			: BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

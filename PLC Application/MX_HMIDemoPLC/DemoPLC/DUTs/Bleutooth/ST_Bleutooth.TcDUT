@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_Bleutooth" Id="{f86b691b-ec88-418e-99da-da89b35f53ba}">
+    <Declaration><![CDATA[TYPE ST_Bleutooth :
+STRUCT
+	Status AT%I*	: ST_Bleutooth_Status	; // status inputs
+	control AT%Q*	: ST_BleutoothControl	; // Control Outputs
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

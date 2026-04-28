@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Name>Drive Manager 2</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{126abc60-7d08-4031-baf2-dc16f1aaa69b}</ProjectGuid>
+    <TcPath>C:\GIT Local Repo\MX Config\Demo sets\DemoSets\PLC Application\MX_HMIDemoPLC\MX_HMIDemoPLC.tsproj</TcPath>
+    <AssemblyName>Motion Drive Manager</AssemblyName>
+    <RootNamespace>Motion Drive Manager</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Term 11 %28MO7221-9016-1114%29.tcdmdrv">
+      <SubType>Content</SubType>
+      <IoItemPathName>TIID^Device 1 (EtherCAT)^Term 14 (MB1200-0000)^Term 8 (MB1100-0002)^Term 11 (MO7221-9016-1114)</IoItemPathName>
+    </Content>
+  </ItemGroup>
+</Project>

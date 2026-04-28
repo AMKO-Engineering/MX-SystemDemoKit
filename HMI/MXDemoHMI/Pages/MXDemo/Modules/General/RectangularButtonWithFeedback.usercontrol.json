@@ -1,0 +1,83 @@
+{
+  "parameters": [
+    {
+      "allowSymbolExpressionsInObject": false,
+      "requiredOnCompile": false,
+      "bindable": true,
+      "propertySetterName": "setButtonVariable",
+      "propertyGetterName": "getButtonVariable",
+      "refTo": "",
+      "name": "data-tchmi-buttonvariable",
+      "displayName": "ButtonVariable",
+      "visible": true,
+      "type": "tchmi:general#/definitions/Boolean",
+      "category": "",
+      "description": "",
+      "readOnly": false,
+      "heritable": true,
+      "propertyName": "ButtonVariable"
+    },
+    {
+      "allowSymbolExpressionsInObject": false,
+      "requiredOnCompile": false,
+      "bindable": true,
+      "propertySetterName": "setFeedBackVariable",
+      "propertyGetterName": "getFeedBackVariable",
+      "refTo": "",
+      "name": "data-tchmi-feedbackvariable",
+      "displayName": "FeedBackVariable",
+      "visible": true,
+      "type": "tchmi:general#/definitions/Boolean",
+      "category": "",
+      "description": "",
+      "readOnly": false,
+      "heritable": true,
+      "propertyName": "FeedBackVariable"
+    },
+    {
+      "allowSymbolExpressionsInObject": false,
+      "defaultValue": {
+        "color": "rgba(51, 246, 3, 1)"
+      },
+      "defaultValueInternal": {
+        "color": "rgba(51, 246, 3, 1)"
+      },
+      "requiredOnCompile": false,
+      "bindable": true,
+      "propertySetterName": "setFeedBackCollour",
+      "propertyGetterName": "getFeedBackCollour",
+      "refTo": "",
+      "name": "data-tchmi-feedbackcollour",
+      "displayName": "FeedBackCollour",
+      "visible": true,
+      "type": "tchmi:framework#/definitions/SolidColor",
+      "category": "",
+      "description": "",
+      "readOnly": false,
+      "heritable": true,
+      "propertyName": "FeedBackCollour"
+    },
+    {
+      "allowSymbolExpressionsInObject": false,
+      "defaultValue": "FeedbackButton",
+      "defaultValueInternal": "FeedbackButton",
+      "requiredOnCompile": false,
+      "bindable": true,
+      "propertySetterName": "setDisplayText",
+      "propertyGetterName": "getDisplayText",
+      "refTo": "",
+      "name": "data-tchmi-displaytext",
+      "displayName": "DisplayText",
+      "visible": true,
+      "type": "tchmi:general#/definitions/String",
+      "category": "",
+      "description": "",
+      "readOnly": false,
+      "heritable": true,
+      "propertyName": "DisplayText"
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.258/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

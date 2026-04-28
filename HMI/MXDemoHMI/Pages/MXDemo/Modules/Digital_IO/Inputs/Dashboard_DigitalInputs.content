@@ -1,0 +1,371 @@
+<div id="Dashboard1" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-height-mode="Content">
+  <div id="Dashboard_Digitalinputs" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="32" data-tchmi-height-unit="px" data-tchmi-left="32" data-tchmi-left-unit="px" data-tchmi-text="Digital Inputs" data-tchmi-top="16" data-tchmi-top-unit="px" data-tchmi-width="288" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+    <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+      [
+      "headline-2"
+      ]
+    </script>
+  </div>
+
+  <div id="TcHmiGrid_Dashboard1_1" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height="628" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="56" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-height-mode="Content" data-tchmi-cell-wrap="True" data-tchmi-creator-locked="True">
+    <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+      [
+      {
+      "width": 1.0,
+      "widthUnit": "factor",
+      "widthMode": "Value",
+      "maxWidthUnit": "px",
+      "minWidth": 480.0,
+      "minWidthUnit": "px",
+      "overflow": false
+      },
+      {
+      "width": 1.0,
+      "widthUnit": "factor",
+      "widthMode": "Value",
+      "maxWidthUnit": "px",
+      "minWidth": 480.0,
+      "minWidthUnit": "px",
+      "overflow": false
+      },
+      {
+      "width": 1.0,
+      "widthUnit": "factor",
+      "widthMode": "Value",
+      "maxWidthUnit": "px",
+      "minWidth": 480.0,
+      "minWidthUnit": "px",
+      "overflow": false
+      }
+      ]
+    </script>
+    <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+      [
+      {
+      "height": 1.0,
+      "heightUnit": "factor",
+      "heightMode": "Content",
+      "maxHeightUnit": "px",
+      "minHeightUnit": "px",
+      "overflow": false
+      }
+      ]
+    </script>
+
+
+    <div id="TcHmiGrid_Dashboard1_2" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height="100" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-height-mode="Content" data-tchmi-right-unit="px" data-tchmi-creator-locked="True">
+      <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+        [
+        {
+        "width": 1.0,
+        "widthUnit": "factor",
+        "widthMode": "Value",
+        "maxWidthUnit": "px",
+        "minWidth": 480.0,
+        "minWidthUnit": "px",
+        "overflow": false
+        },
+        {
+        "width": 1.0,
+        "widthUnit": "factor",
+        "widthMode": "Value",
+        "maxWidthUnit": "px",
+        "minWidth": 480.0,
+        "minWidthUnit": "px",
+        "overflow": false
+        }
+        ]
+      </script>
+      <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+        [
+        {
+        "height": 1,
+        "heightUnit": "factor",
+        "heightMode": "Value",
+        "maxHeightUnit": "px",
+        "minHeightUnit": "px",
+        "overflow": false
+        }
+        ]
+      </script>
+
+      <script data-tchmi-target-attribute="data-tchmi-cell-options" type="application/json">
+        [
+        {
+        "columnIndex": 0,
+        "rowIndex": 0,
+        "padding": {
+        "left": 16,
+        "right": 16,
+        "top": 16,
+        "bottom": 16,
+        "leftUnit": "px",
+        "rightUnit": "px",
+        "topUnit": "px",
+        "bottomUnit": "px"
+        },
+        "backgroundImageWidthUnit": "px",
+        "backgroundImageHeightUnit": "px",
+        "backgroundImageHorizontalAlignment": "Center",
+        "backgroundImageVerticalAlignment": "Center"
+        },
+        {
+        "columnIndex": 1,
+        "rowIndex": 0,
+        "padding": {
+        "left": 16,
+        "right": 16,
+        "top": 16,
+        "bottom": 16,
+        "leftUnit": "px",
+        "rightUnit": "px",
+        "topUnit": "px",
+        "bottomUnit": "px"
+        },
+        "backgroundImageWidthUnit": "px",
+        "backgroundImageHeightUnit": "px",
+        "backgroundImageHorizontalAlignment": "Center",
+        "backgroundImageVerticalAlignment": "Center"
+        }
+        ]
+      </script>
+
+      <div id="TcHmiContainer_Dashboard1_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-height="282">
+        <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+          [
+          "background-container"
+          ]
+        </script>
+      <div id="TcHmiTextblock_6" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-text="MO1008-0000-1111 8-channel digital input, 24 V DC, M8
+
+With eight digital inputs, acquires binary control signals from the process level and transfers them, with electrical isolation, to the controller. The signal state is shown on the display; the signal interface is established via screw-type M8 connectors.
+
+In addition, various diagnostic options and configurable input filters are available for each channel. The short-circuit proof 24 V DC sensor power supply for the M8 connectors has electronic protection." data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-word-wrap="True" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%" data-tchmi-text-font-size="150" data-tchmi-text-font-size-unit="%">
+</div>
+</div>
+
+      <div data-tchmi-grid-column-index="1" id="TcHmiContainer_Dashboard1_2" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-height="288">
+        <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+          [
+          "background-container"
+          ]
+        </script>
+      <div id="TcHmiGrid_7" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+[
+  {
+    "overflow": false,
+    "width": 1.0,
+    "widthMode": "Value",
+    "widthUnit": "factor"
+  },
+  {
+    "width": 1,
+    "widthMode": "Value",
+    "widthUnit": "factor"
+  },
+  {
+    "width": 1,
+    "widthMode": "Value",
+    "widthUnit": "factor"
+  }
+]
+</script>
+<div id="UserControl1_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-target-user-control="Pages/MXDemo/Modules/Digital_IO/Inputs/4RadioButtonGroup.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%" data-tchmi-name_1="X1" data-tchmi-name_2="X2" data-tchmi-name_3="X3" data-tchmi-name_4="X4" data-tchmi-b1="%s%ADS.PLC1.MAIN.StDIData::InputStatus::bInputCh1%/s%" data-tchmi-b2="%s%ADS.PLC1.MAIN.StDIData::InputStatus::bInputCh2%/s%" data-tchmi-b3="%s%ADS.PLC1.MAIN.StDIData::InputStatus::bInputCh3%/s%" data-tchmi-b4="%s%ADS.PLC1.MAIN.StDIData::InputStatus::bInputCh4%/s%">
+</div>
+<div id="UserControl1_2" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="2" data-tchmi-grid-row-index="0" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-target-user-control="Pages/MXDemo/Modules/Digital_IO/Inputs/4RadioButtonGroup.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%" data-tchmi-b1="%s%ADS.PLC1.MAIN.StDIData::InputStatus::bInputCh5%/s%" data-tchmi-b2="%s%ADS.PLC1.MAIN.StDIData::InputStatus::bInputCh6%/s%" data-tchmi-b3="%s%ADS.PLC1.MAIN.StDIData::InputStatus::bInputCh7%/s%" data-tchmi-b4="%s%ADS.PLC1.MAIN.StDIData::InputStatus::bInputCh8%/s%" data-tchmi-name_1="X5" data-tchmi-name_2="X6" data-tchmi-name_3="X7" data-tchmi-name_4="X8">
+</div>
+<div id="TcHmiGrid_9" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%">
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+[
+  {
+    "height": 1,
+    "heightMode": "Value",
+    "heightUnit": "factor",
+    "overflow": false
+  },
+  {
+    "height": 1,
+    "heightMode": "Value",
+    "heightUnit": "factor"
+  }
+]
+</script>
+<div id="TcHmiButton_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height-unit="%" data-tchmi-left="5" data-tchmi-left-unit="%" data-tchmi-text="RESET" data-tchmi-top="5" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-word-wrap="True" data-tchmi-right="5" data-tchmi-right-unit="%" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-text-font-size="150" data-tchmi-text-font-size-unit="%" data-tchmi-state-symbol="%s%ADS.PLC1.MAIN.StDIData::EFIOutputs::bReset%/s%">
+</div>
+</div>
+</div>
+</div>
+    </div>
+
+    <div id="TcHmiGrid_Dashboard1_3" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-grid-column-index="2" data-tchmi-height="100" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-height-mode="Content" data-tchmi-right-unit="px" data-tchmi-creator-locked="True">
+      <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+        [
+        {
+        "width": 1.0,
+        "widthUnit": "factor",
+        "widthMode": "Value",
+        "maxWidthUnit": "px",
+        "minWidth": 480.0,
+        "minWidthUnit": "px",
+        "overflow": false
+        },
+        {
+        "width": 1.0,
+        "widthUnit": "factor",
+        "widthMode": "Value",
+        "maxWidthUnit": "px",
+        "minWidth": 480.0,
+        "minWidthUnit": "px",
+        "overflow": false
+        }
+        ]
+      </script>
+      <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+        [
+        {
+        "height": 1,
+        "heightUnit": "factor",
+        "heightMode": "Value",
+        "maxHeightUnit": "px",
+        "minHeightUnit": "px",
+        "overflow": false
+        }
+        ]
+      </script>
+
+
+      <script data-tchmi-target-attribute="data-tchmi-cell-options" type="application/json">
+        [
+        {
+        "columnIndex": 0,
+        "rowIndex": 0,
+        "padding": {
+        "left": 16,
+        "right": 16,
+        "top": 16,
+        "bottom": 16,
+        "leftUnit": "px",
+        "rightUnit": "px",
+        "topUnit": "px",
+        "bottomUnit": "px"
+        },
+        "backgroundImageWidthUnit": "px",
+        "backgroundImageHeightUnit": "px",
+        "backgroundImageHorizontalAlignment": "Center",
+        "backgroundImageVerticalAlignment": "Center"
+        },
+        {
+        "columnIndex": 1,
+        "rowIndex": 0,
+        "padding": {
+        "left": 16,
+        "right": 16,
+        "top": 16,
+        "bottom": 16,
+        "leftUnit": "px",
+        "rightUnit": "px",
+        "topUnit": "px",
+        "bottomUnit": "px"
+        },
+        "backgroundImageWidthUnit": "px",
+        "backgroundImageHeightUnit": "px",
+        "backgroundImageHorizontalAlignment": "Center",
+        "backgroundImageVerticalAlignment": "Center"
+        }
+        ]
+      </script>
+
+      <div id="TcHmiContainer_Dashboard1_3" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-height="288">
+        <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+          [
+          "background-container"
+          ]
+        </script>
+      <div id="EhterCatAndPowerMonitor_3" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-target-user-control="Pages/MXDemo/Modules/EtherCAT/Junction/EhterCatAndPowerMonitor.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%" data-tchmi-efuinputs="%s%ADS.PLC1.MAIN.StDIData::EFUInputs%/s%" data-tchmi-efuoutputs="%s%ADS.PLC1.MAIN.StDIData::EFUOutputs%/s%">
+</div>
+</div>
+
+      <div data-tchmi-grid-column-index="1" id="TcHmiContainer_Dashboard1_4" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-height="288">
+        <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+          [
+          "background-container"
+          ]
+        </script>
+      </div>
+    </div>
+    <div data-tchmi-grid-column-index="1" id="TcHmiGrid_Dashboard1_4" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height="100" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-height-mode="Content" data-tchmi-creator-locked="True">
+      <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+        [
+        {
+        "width": 1,
+        "widthUnit": "factor",
+        "widthMode": "Value",
+        "maxWidthUnit": "px",
+        "minWidthUnit": "px",
+        "overflow": false
+        }
+        ]
+      </script>
+      <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+        [
+        {
+        "height": 1,
+        "heightUnit": "factor",
+        "heightMode": "Value",
+        "maxHeightUnit": "px",
+        "minHeightUnit": "px",
+        "overflow": false
+        }
+        ]
+      </script>
+
+
+      <script data-tchmi-target-attribute="data-tchmi-cell-options" type="application/json">
+        [
+        {
+        "columnIndex": 0,
+        "rowIndex": 0,
+        "padding": {
+        "left": 16,
+        "right": 16,
+        "top": 16,
+        "bottom": 16,
+        "leftUnit": "px",
+        "rightUnit": "px",
+        "topUnit": "px",
+        "bottomUnit": "px"
+        },
+        "backgroundColor": "",
+        "borderColor": "",
+        "borderWidth": "",
+        "borderStyle": "",
+        "backgroundImage": "",
+        "backgroundImageWidth": null,
+        "backgroundImageWidthUnit": "px",
+        "backgroundImageHeight": null,
+        "backgroundImageHeightUnit": "px",
+        "backgroundImageHorizontalAlignment": "Center",
+        "backgroundImageVerticalAlignment": "Center",
+        "backgroundImagePadding": ""
+        }
+        ]
+      </script>
+      <div data-tchmi-grid-column-index="1" id="TcHmiContainer_Dashboard1_5" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-height="608">
+        <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+          [
+          "background-container"
+          ]
+        </script>
+      <div id="Image_MO1008" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-src="Images/MX-System/MO1008-0000-1111.svg" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%">
+</div>
+</div>
+
+    </div>
+
+  </div>
+</div>

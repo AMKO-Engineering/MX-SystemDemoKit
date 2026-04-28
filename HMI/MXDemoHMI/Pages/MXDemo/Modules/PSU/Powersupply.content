@@ -1,0 +1,568 @@
+<div id="PSU" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-height-mode="Content" data-tchmi-creator-locked="True">
+  <div id="TcHmiTextblock_CPU_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="32" data-tchmi-height-unit="px" data-tchmi-left="32" data-tchmi-left-unit="px" data-tchmi-text="Powersupply" data-tchmi-top="16" data-tchmi-top-unit="px" data-tchmi-width="288" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-creator-locked="True">
+    <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+      [
+      "headline-2"
+      ]
+    </script>
+  </div>
+
+  <div id="TcHmiGrid_CPU_8" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height="628" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="56" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-height-mode="Content" data-tchmi-cell-wrap="True" data-tchmi-creator-locked="True">
+    <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+      [
+      {
+      "width": 1.0,
+      "widthUnit": "factor",
+      "widthMode": "Value",
+      "maxWidthUnit": "px",
+      "minWidth": 480.0,
+      "minWidthUnit": "px",
+      "overflow": false
+      },
+      {
+      "width": 1.0,
+      "widthUnit": "factor",
+      "widthMode": "Value",
+      "maxWidthUnit": "px",
+      "minWidth": 480.0,
+      "minWidthUnit": "px",
+      "overflow": false
+      },
+      {
+      "width": 1.0,
+      "widthUnit": "factor",
+      "widthMode": "Value",
+      "maxWidthUnit": "px",
+      "minWidth": 480.0,
+      "minWidthUnit": "px",
+      "overflow": false
+      }
+      ]
+    </script>
+    <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+      [
+      {
+      "height": 1.0,
+      "heightUnit": "factor",
+      "heightMode": "Content",
+      "maxHeightUnit": "px",
+      "minHeightUnit": "px",
+      "overflow": false
+      }
+      ]
+    </script>
+
+
+    <div id="TcHmiGrid_CPU_7" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height="100" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-height-mode="Content" data-tchmi-right-unit="px" data-tchmi-creator-locked="True">
+      <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+        [
+        {
+        "width": 1.0,
+        "widthUnit": "factor",
+        "widthMode": "Value",
+        "maxWidthUnit": "px",
+        "minWidth": 480.0,
+        "minWidthUnit": "px",
+        "overflow": false
+        },
+        {
+        "width": 1.0,
+        "widthUnit": "factor",
+        "widthMode": "Value",
+        "maxWidthUnit": "px",
+        "minWidth": 480.0,
+        "minWidthUnit": "px",
+        "overflow": false
+        }
+        ]
+      </script>
+      <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+        [
+        {
+        "height": 1,
+        "heightUnit": "factor",
+        "heightMode": "Value",
+        "maxHeightUnit": "px",
+        "minHeightUnit": "px",
+        "overflow": false
+        }
+        ]
+      </script>
+
+      <script data-tchmi-target-attribute="data-tchmi-cell-options" type="application/json">
+        [
+        {
+        "columnIndex": 0,
+        "rowIndex": 0,
+        "padding": {
+        "left": 16,
+        "right": 16,
+        "top": 16,
+        "bottom": 16,
+        "leftUnit": "px",
+        "rightUnit": "px",
+        "topUnit": "px",
+        "bottomUnit": "px"
+        },
+        "backgroundImageWidthUnit": "px",
+        "backgroundImageHeightUnit": "px",
+        "backgroundImageHorizontalAlignment": "Center",
+        "backgroundImageVerticalAlignment": "Center"
+        },
+        {
+        "columnIndex": 1,
+        "rowIndex": 0,
+        "padding": {
+        "left": 16,
+        "right": 16,
+        "top": 16,
+        "bottom": 16,
+        "leftUnit": "px",
+        "rightUnit": "px",
+        "topUnit": "px",
+        "bottomUnit": "px"
+        },
+        "backgroundImageWidthUnit": "px",
+        "backgroundImageHeightUnit": "px",
+        "backgroundImageHorizontalAlignment": "Center",
+        "backgroundImageVerticalAlignment": "Center"
+        }
+        ]
+      </script>
+
+      <div id="TcHmiContainer_PSU0" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-height="282" data-tchmi-creator-locked="True">
+        <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+          [
+          "background-container"
+          ]
+        </script>
+      <div id="TextBlock_PSUDetails" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-text="MS1010-1002-1334 Power infeed + Forwarding
+
+100...240V AC 10 A In
+Supplys 24V DC 7A  to Backplate
+
+Suitable for 1 row baseplates
+
+B17 Connector for easy connection
+240V AC can be forwarded" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-word-wrap="True" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%" data-tchmi-width-mode="Parent" data-tchmi-height-mode="Parent" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-font-size-unit="%" data-tchmi-text-font-size="150" data-tchmi-creator-locked="True">
+</div>
+</div>
+
+      <div data-tchmi-grid-column-index="1" id="TcHmiContainer_PSU9" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-height="288">
+        <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+          [
+          "background-container"
+          ]
+        </script>
+      <div id="TcHmiGrid_3" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+[
+  {
+    "overflow": false,
+    "width": 1.0,
+    "widthMode": "Value",
+    "widthUnit": "factor"
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+[
+  {
+    "height": 4.0,
+    "heightMode": "Value",
+    "heightUnit": "factor",
+    "overflow": false
+  },
+  {
+    "height": 1,
+    "heightMode": "Value",
+    "heightUnit": "factor"
+  }
+]
+</script>
+<div id="TcHmiGrid_4" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="1" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+[
+  {
+    "overflow": false,
+    "width": 2.0,
+    "widthMode": "Value",
+    "widthUnit": "factor"
+  },
+  {
+    "width": 2.0,
+    "widthMode": "Value",
+    "widthUnit": "factor"
+  },
+  {
+    "width": 1,
+    "widthMode": "Value",
+    "widthUnit": "factor"
+  }
+]
+</script>
+<div id="Indicator_PSU_Overrange" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-target-user-control="Pages/MXDemo/Modules/General/indicator.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%" data-tchmi-text="Overrange" data-tchmi-indicatorstatus="%s%stPSUData::Overrange%/s%">
+</div>
+<div id="Indicator_PSU_Error" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-target-user-control="Pages/MXDemo/Modules/General/indicator.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%" data-tchmi-width-mode="Parent" data-tchmi-height-mode="Parent" data-tchmi-text="Error" data-tchmi-indicatorstatus="%s%stPSUData::bError%/s%">
+</div>
+</div>
+<div id="Trendline_OutputCurrent" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTrendLineChart" data-tchmi-end="Latest" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-start="First" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-x-axis-name="x-axis 1" data-tchmi-x-sub-tick-steps="4" data-tchmi-y-sub-tick-steps="4" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%">
+<script data-tchmi-target-attribute="data-tchmi-y-axis" type="application/json">
+[
+  {
+    "id": 1,
+    "showAxis": true,
+    "position": "Left",
+    "logarithmicScale": false,
+    "axisLabeling": "Number",
+    "showLabels": true,
+    "mainTickMinValue": 0.0,
+    "mainTickMaxValue": 100.0,
+    "showAxisName": true,
+    "axisName": "Output current",
+    "axisNameFontSize": 15,
+    "axisNameFontSizeUnit": "px",
+    "axisNameFontWeight": "Bold",
+    "decimalPlaces": 2,
+    "autoScaling": true,
+    "labelFontColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisLabelFontColor%/tr%",
+    "axisColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisColor%/tr%",
+    "axisNameFontColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisNameFontColor%/tr%"
+  }
+]
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-line-graph-descriptions" type="application/json">
+[
+  {
+    "yAxisId": 1,
+    "symbol": "Log_fActualOutputCurrent",
+    "lineWidth": 1,
+    "pointDot": false,
+    "pointDotRadius": 3,
+    "pointDotStrokeWidth": 1,
+    "pointDotInStopMode": false,
+    "lineColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::LineGraphDescriptionLineColor%/tr%",
+    "pointDotFillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::LineGraphDescriptionPointDotFillColor%/tr%",
+    "pointDotStrokeColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::LineGraphDescriptionPointDotStrokeColor%/tr%",
+    "fillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionFillColor%/tr%"
+  }
+]
+</script>
+</div>
+</div>
+</div>
+    </div>
+
+    <div id="TcHmiGrid_CPU_6" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-grid-column-index="2" data-tchmi-height="100" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-height-mode="Content" data-tchmi-right-unit="px">
+      <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+        [
+        {
+        "width": 1.0,
+        "widthUnit": "factor",
+        "widthMode": "Value",
+        "maxWidthUnit": "px",
+        "minWidth": 480.0,
+        "minWidthUnit": "px",
+        "overflow": false
+        },
+        {
+        "width": 1.0,
+        "widthUnit": "factor",
+        "widthMode": "Value",
+        "maxWidthUnit": "px",
+        "minWidth": 480.0,
+        "minWidthUnit": "px",
+        "overflow": false
+        }
+        ]
+      </script>
+      <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+        [
+        {
+        "height": 1,
+        "heightUnit": "factor",
+        "heightMode": "Value",
+        "maxHeightUnit": "px",
+        "minHeightUnit": "px",
+        "overflow": false
+        }
+        ]
+      </script>
+
+
+      <script data-tchmi-target-attribute="data-tchmi-cell-options" type="application/json">
+        [
+        {
+        "columnIndex": 0,
+        "rowIndex": 0,
+        "padding": {
+        "left": 16,
+        "right": 16,
+        "top": 16,
+        "bottom": 16,
+        "leftUnit": "px",
+        "rightUnit": "px",
+        "topUnit": "px",
+        "bottomUnit": "px"
+        },
+        "backgroundImageWidthUnit": "px",
+        "backgroundImageHeightUnit": "px",
+        "backgroundImageHorizontalAlignment": "Center",
+        "backgroundImageVerticalAlignment": "Center"
+        },
+        {
+        "columnIndex": 1,
+        "rowIndex": 0,
+        "padding": {
+        "left": 16,
+        "right": 16,
+        "top": 16,
+        "bottom": 16,
+        "leftUnit": "px",
+        "rightUnit": "px",
+        "topUnit": "px",
+        "bottomUnit": "px"
+        },
+        "backgroundImageWidthUnit": "px",
+        "backgroundImageHeightUnit": "px",
+        "backgroundImageHorizontalAlignment": "Center",
+        "backgroundImageVerticalAlignment": "Center"
+        }
+        ]
+      </script>
+
+      <div id="TcHmiContainer_CPU_8" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-height="288">
+        <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+          [
+          "background-container"
+          ]
+        </script>
+      <div id="TcHmiTrendLineChart_6" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTrendLineChart" data-tchmi-end="Latest" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-start="First" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-x-axis-name="x-axis 1" data-tchmi-x-sub-tick-steps="4" data-tchmi-y-sub-tick-steps="4" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%">
+<script data-tchmi-target-attribute="data-tchmi-y-axis" type="application/json">
+[
+  {
+    "id": 1,
+    "showAxis": true,
+    "position": "Left",
+    "logarithmicScale": false,
+    "axisLabeling": "Number",
+    "showLabels": true,
+    "mainTickMinValue": 0.0,
+    "mainTickMaxValue": 30.0,
+    "showAxisName": true,
+    "axisName": "Output Voltage",
+    "axisNameFontSize": 15,
+    "axisNameFontSizeUnit": "px",
+    "axisNameFontWeight": "Bold",
+    "decimalPlaces": 2,
+    "autoScaling": false,
+    "labelFontColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisLabelFontColor%/tr%",
+    "axisColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisColor%/tr%",
+    "axisNameFontColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisNameFontColor%/tr%"
+  }
+]
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-line-graph-descriptions" type="application/json">
+[
+  {
+    "yAxisId": 1,
+    "symbol": "Log_fActualOutputVoltage",
+    "lineWidth": 1,
+    "pointDot": false,
+    "pointDotRadius": 3,
+    "pointDotStrokeWidth": 1,
+    "pointDotInStopMode": false,
+    "lineColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::LineGraphDescriptionLineColor%/tr%",
+    "pointDotFillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::LineGraphDescriptionPointDotFillColor%/tr%",
+    "pointDotStrokeColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::LineGraphDescriptionPointDotStrokeColor%/tr%",
+    "fillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionFillColor%/tr%"
+  }
+]
+</script>
+</div>
+</div>
+
+      <div data-tchmi-grid-column-index="1" id="TcHmiContainer_CPU_7" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-height="288">
+        <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+          [
+          "background-container"
+          ]
+        </script>
+      <div id="TcHmiGrid_5" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%">
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+[
+  {
+    "overflow": false,
+    "width": 1.0,
+    "widthMode": "Value",
+    "widthUnit": "factor"
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+[
+  {
+    "height": 4.0,
+    "heightMode": "Value",
+    "heightUnit": "factor",
+    "overflow": false
+  },
+  {
+    "height": 1,
+    "heightMode": "Value",
+    "heightUnit": "factor"
+  }
+]
+</script>
+<div id="TcHmiGrid_6" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="1" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+[
+  {
+    "overflow": false,
+    "width": 2.0,
+    "widthMode": "Value",
+    "widthUnit": "factor"
+  },
+  {
+    "width": 2.0,
+    "widthMode": "Value",
+    "widthUnit": "factor"
+  },
+  {
+    "width": 1,
+    "widthMode": "Value",
+    "widthUnit": "factor"
+  }
+]
+</script>
+<div id="Indicator_PSU_I2T_Warning" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-target-user-control="Pages/MXDemo/Modules/General/indicator.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%" data-tchmi-width-mode="Parent" data-tchmi-height-mode="Parent" data-tchmi-text="I2T Warning" data-tchmi-indicatorstatus="%s%stPSUData::bError%/s%">
+</div>
+</div>
+<div id="Trendline_I2T" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTrendLineChart" data-tchmi-end="Latest" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-start="First" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-x-axis-name="x-axis 1" data-tchmi-x-sub-tick-steps="4" data-tchmi-y-sub-tick-steps="4" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%">
+<script data-tchmi-target-attribute="data-tchmi-y-axis" type="application/json">
+[
+  {
+    "id": 1,
+    "showAxis": true,
+    "position": "Left",
+    "logarithmicScale": false,
+    "axisLabeling": "Number",
+    "showLabels": true,
+    "mainTickMinValue": 0.0,
+    "mainTickMaxValue": 30.0,
+    "showAxisName": true,
+    "axisName": "I2T Utilization",
+    "axisNameFontSize": 15,
+    "axisNameFontSizeUnit": "px",
+    "axisNameFontWeight": "Bold",
+    "decimalPlaces": 2,
+    "autoScaling": true,
+    "labelFontColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisLabelFontColor%/tr%",
+    "axisColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisColor%/tr%",
+    "axisNameFontColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisNameFontColor%/tr%"
+  }
+]
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-line-graph-descriptions" type="application/json">
+[
+  {
+    "yAxisId": 1,
+    "symbol": "Log_fActualOutputCurrent",
+    "lineWidth": 1,
+    "pointDot": false,
+    "pointDotRadius": 3,
+    "pointDotStrokeWidth": 1,
+    "pointDotInStopMode": false,
+    "lineColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::LineGraphDescriptionLineColor%/tr%",
+    "pointDotFillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::LineGraphDescriptionPointDotFillColor%/tr%",
+    "pointDotStrokeColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::LineGraphDescriptionPointDotStrokeColor%/tr%",
+    "fillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionFillColor%/tr%"
+  }
+]
+</script>
+</div>
+</div>
+</div>
+    </div>
+    <div data-tchmi-grid-column-index="1" id="TcHmiGrid_CPU_5" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height="100" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-height-mode="Content">
+      <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+        [
+        {
+        "width": 1,
+        "widthUnit": "factor",
+        "widthMode": "Value",
+        "maxWidthUnit": "px",
+        "minWidthUnit": "px",
+        "overflow": false
+        }
+        ]
+      </script>
+      <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+        [
+        {
+        "height": 1,
+        "heightUnit": "factor",
+        "heightMode": "Value",
+        "maxHeightUnit": "px",
+        "minHeightUnit": "px",
+        "overflow": false
+        }
+        ]
+      </script>
+
+
+      <script data-tchmi-target-attribute="data-tchmi-cell-options" type="application/json">
+        [
+        {
+        "columnIndex": 0,
+        "rowIndex": 0,
+        "padding": {
+        "left": 16,
+        "right": 16,
+        "top": 16,
+        "bottom": 16,
+        "leftUnit": "px",
+        "rightUnit": "px",
+        "topUnit": "px",
+        "bottomUnit": "px"
+        },
+        "backgroundColor": "",
+        "borderColor": "",
+        "borderWidth": "",
+        "borderStyle": "",
+        "backgroundImage": "",
+        "backgroundImageWidth": null,
+        "backgroundImageWidthUnit": "px",
+        "backgroundImageHeight": null,
+        "backgroundImageHeightUnit": "px",
+        "backgroundImageHorizontalAlignment": "Center",
+        "backgroundImageVerticalAlignment": "Center",
+        "backgroundImagePadding": ""
+        }
+        ]
+      </script>
+      <div data-tchmi-grid-column-index="1" id="TcHmiContainer_CPU_6" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-height="608">
+        <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+          [
+          "background-container"
+          ]
+        </script>
+      <div id="TcHmiImage_3" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-left="5" data-tchmi-left-unit="%" data-tchmi-src="Images/MX-System/MS1010-1002-1334.svg" data-tchmi-top="5" data-tchmi-top-unit="%" data-tchmi-right="5" data-tchmi-right-unit="%" data-tchmi-bottom-unit="%" data-tchmi-bottom="5">
+</div>
+</div>
+
+    </div>
+
+  </div>
+</div>

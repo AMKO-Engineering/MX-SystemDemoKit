@@ -1,0 +1,14 @@
+{
+  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.229/runtimes/native1.12-tchmi/Schema/LocalizationDescription.Schema.json",
+  "locale": "en",
+  "localizedText": {
+    "L_Language": "Language",
+    "L_German": "German",
+    "L_English": "English",
+    "L_LanguageSelection": "Language Selection",
+    "L_CloseText": "Close",
+    "L_StartPage": "Start Page",
+    "L_MXDemo": "MX Demo",
+    "L_MXSystempresentation": "MX-System presentation"
+  }
+}

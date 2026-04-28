@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_EFU_Inputs" Id="{7370842a-66da-4f0c-981f-c349e0bf9a26}">
+    <Declaration><![CDATA[TYPE ST_EFU_Inputs :
+STRUCT
+	bWarning 	: BOOL;
+	bError 		: BOOL;
+	bTripped 	: BOOL;
+	bEnabled 	: BOOL;
+	//InputCycleCounter : BYTE;
+	fCurrent 	: REAL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="MAIN" Id="{5a34bba1-3b30-435a-b47d-1134580cc96a}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+// Power control
+	bCmdPowerOff			: BOOL; // Power off command from HMI 
+	tonPowerOff				: TON := (PT := T#3S); // Timer for power down
+	bShuttingDown			: BOOL; // System is shutting down
+	ntShutdown				: NT_Shutdown ;
+	
+// Bleutooth
+	stBleuToothData			: ST_Bleutooth		;
+	bEnableBleutooth		: BOOL	:= TRUE		;
+//PSU
+	stPSUData				: ST_PSU_Data		;
+//EtherCAT
+	st_MS4208_EtherCATOut	: ST_MS4208_ETCOut	;
+// Digital IO
+	St_MO1008_DIData		: ST_MO1008_DI		;
+	st_MO2008_DOData		: ST_MO2008_DO		;
+	STD_MO2338_CombiData	: ST_MO2338_DCombi	;
+	
+// Safety	
+	bRunSafety	AT%Q*	: BOOL ; // Run Safet program
+
+//CPU
+	stCpuData				: ST_CPUData		; 
+	stTaskData				: ST_TaskData		;
+	fbCollectCPUData	: FB_CollectCPUData;
+
+// Motion
+	bCmdStartManualMotionControl	: BOOL; // manual motion control is active (false = DemoMode)
+	bCmdStopDemoMotion				: BOOL; // Enable demo mode
+	bDemoMotionActive				: BOOL; // Demo mode is active
+	bManualMotionAcitve				: BOOL; // Manual motion control is active
+	fbDemoMotion					: FB_DemoMotion;	
+
+	
+	
+END_VAR
+VAR //	GlobalFunctions 
+	fbBlinkSlow	: FB_Blink;
+	fbBlinkFast	: FB_Blink;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[ExecGlobalFunctions();
+
+//Enable bleutooth module
+stBleuToothData.control.EnableBleutoothDiagnosis 	:= TRUE;
+stBleuToothData.control.ActivatePairingMode			:= TRUE; //not stBleutooth.Status.Connected; 
+
+bRunSafety := TRUE;
+
+// Check for controlled shutdown command
+ShutdownControl();
+
+fbCollectCPUData();
+stCpuData 	:= fbCollectCPUData.GetCPUData;
+stTaskData 	:= fbCollectCPUData.GetTaskData;
+
+// Demo motion control
+fbDemoMotion.StopDemoMode 	:= bCmdStopDemoMotion;
+fbDemoMotion.StartManualMode := bCmdStartManualMotionControl;
+
+fbDemoMotion();
+
+bManualMotionAcitve := fbDemoMotion.ManualModeActive;
+bDemoMotionActive	:= fbDemoMotion.DemoModeActive;
+
+
+]]></ST>
+    </Implementation>
+    <Method Name="ExecBleutoothControl" Id="{b382a3f6-780d-4a9c-a720-71ca7f5698f8}">
+      <Declaration><![CDATA[METHOD ExecBleutoothControl
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="ExecGlobalFunctions" Id="{21963e41-80b8-4613-bc12-8daf6ce2cf6a}">
+      <Declaration><![CDATA[METHOD PROTECTED ExecGlobalFunctions // sets global menaged variables]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[fbBlinkSlow.TimeOff := 1000;
+fbBlinkSlow.TimeOn 	:= 1000;
+fbBlinkSlow();
+Global_Managed_Variables.Blink_Slow := fbBlinkSlow.BlinkBit;
+ 
+fbBlinkFast.TimeOff := 500;
+fbBlinkFast.TimeOn 	:= 500;
+fbBlinkFast();
+Global_Managed_Variables.Blink_Fast := fbBlinkFast.BlinkBit;
+
+
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="ShutdownControl" Id="{1b1055da-c6fb-4285-8406-c66be36474f6}">
+      <Declaration><![CDATA[METHOD ShutdownControl // controlled shutdown of the MX system
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+tonPowerOff(IN := bCmdPowerOff);
+
+IF tonPowerOff.Q THEN 
+	bCmdStopDemoMotion	:= TRUE;
+	bShuttingDown		:= NOT bDemoMotionActive;
+END_IF
+
+ntShutdown(	START:= bShuttingDown, TMOUT:= T#5S);]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

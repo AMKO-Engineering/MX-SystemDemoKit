@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_DOS_Chanel_Diagnosis" Id="{84c712ae-7221-4653-b911-08ff2a499d7f}">
+    <Declaration><![CDATA[TYPE ST_DOS_Chanel_Diagnosis :
+STRUCT
+	bOvercurrent 		: BOOL;
+	bOverload			: BOOL;
+	bOpenLoad			: BOOL;
+	bShortTo24V			: BOOL;
+	PowersupplyMissing	: BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

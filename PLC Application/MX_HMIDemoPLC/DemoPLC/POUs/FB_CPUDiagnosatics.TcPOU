@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_CPUDiagnosatics" Id="{5b14e865-572c-476c-b156-e10f10f57ed2}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM FB_CPUDiagnosatics
+VAR
+	bExecute 				: BOOL;
+	tPeriod 				: TIME := T#500MS ;
+	fbReadIPCDiagnostics 	: FB_IPCDiag_ReadParameterPeriodic 	;
+	eParameterKey			: E_IPCDiag_ParameterKey			;
+END_VAR
+VAR_IN_OUT
+	fbDiagRegister			: FB_IPCDiag_Register ;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

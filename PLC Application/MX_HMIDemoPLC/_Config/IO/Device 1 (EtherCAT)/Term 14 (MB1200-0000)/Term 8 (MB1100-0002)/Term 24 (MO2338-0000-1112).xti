@@ -1,0 +1,349 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.20" ClassName="CFlbTermDef" SubType="9099">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
+			<BitSize>1</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>1</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-00200000000A}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..9] OF BIT</Name>
+			<BitSize>10</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>10</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000010}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..1] OF BYTE</Name>
+			<BitSize>16</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>2</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000002}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..1] OF BIT</Name>
+			<BitSize>2</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>2</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000009}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..8] OF BIT</Name>
+			<BitSize>9</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>9</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-00200000000D}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..12] OF BIT</Name>
+			<BitSize>13</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>13</Elements>
+			</ArrayInfo>
+		</DataType>
+	</DataTypes>
+	<ImageDatas>
+		<ImageData Id="1000">424dd6020000000000003600000028000000100000000e0000000100180000000000a002000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffa4a0a0a4a0a0a4a0a0a4a0a0a4a0a0ff00ff000000ff00ffff00ffff00ff000000ff00ff000000000000000000ff00ffa4a0a0a4a0a0a4a0a0a4a0a0a4a0a0ff00ff000000ff00ff000000ff00ff000000ff00ff000000ff00ff000000ff00ffa4a0a0a4a0a0a4a0a0000000a4a0a0ff00ff000000ff00ff000000ff00ff000000ff00ff000000ff00ff000000ff00ffa4a0a0a4a0a0a4a0a0a4a0a0a4a0a0ff00ff000000000000000000000000000000ff00ff000000ff00ff000000ff00ffa4a0a0000000a4a0a0a4a0a0a4a0a0ff00ff000000000000ff00ff000000000000ff00ff000000000000000000ff00ffa4a0a0a4a0a0a4a0a0a4a0a0a4a0a0ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffa4a0a0a4a0a0a4a0a0000000a4a0a0ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffa4a0a0a4a0a0a4a0a0a4a0a0a4a0a0ff00ff000000ff00ff000000ff00ffff00ffff00ff000000000000000000ff00ffa4a0a0000000a4a0a0a4a0a0a4a0a0ff00ff000000ff00ff000000000000ff00ffff00ff000000ff00ff000000ff00ffa4a0a0a4a0a0a4a0a0a4a0a0a4a0a0ff00ff000000ff00ffff00ff000000ff00ffff00ff000000ff00ff000000ff00ffa4a0a0a4a0a0a4a0a0a4a0a0a4a0a0ff00ff000000ff00ffff00ff000000000000ff00ff000000ff00ff000000ff00ff00000021ff0000000021ff00000000ff00ff000000ff00ffff00ffff00ff000000ff00ff000000000000000000ff00ff000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff00000021ff0000000021ff00000000</ImageData>
+	</ImageDatas>
+	<Box Id="24" BoxType="9099">
+		<Name>__FILENAME__</Name>
+		<ImageId>1000</ImageId>
+		<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="55" FoeType="1" VendorId="#x00000002" ProductCode="#x812b6c8b" RevisionNo="#x00000458" BIC="1P282721SBTN0008rzvh1KMO2338-0000-1112              Q1    2P1724000100  &#10;" InfoDataAddr="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="MO2338-0000-1112 8 Ch. digital combi 24V 0.5A, M12" Desc="MO2338-0000-1112">
+			<SyncMan>001000012600010001000000000000000001001026010000</SyncMan>
+			<SyncMan>001100012200010002000000000000000001001122010000</SyncMan>
+			<SyncMan>001203002400010003000000000000000300001224030000</SyncMan>
+			<SyncMan>001910002000010004000000000000001000001920010000</SyncMan>
+			<Fmmu>0000000000000000001200020100000001000000000000000000000000000000</Fmmu>
+			<Fmmu>0000000000000000001900010100000002000000000000000000000000000000</Fmmu>
+			<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
+			<BootStrapData>0010f400f410f400</BootStrapData>
+			<DcMode>53796e6368726f6e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DcMode>
+			<DcMode>4443000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a0860100000000070100000000000000000000000000000000000000000000000000000000000000</DcMode>
+			<Pdo Name="DIP Input" Index="#x1a00" Flags="#x0010" SyncMan="3">
+				<Entry Name="Input" Index="#x6000" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Input" Index="#x6010" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Input" Index="#x6020" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Input" Index="#x6030" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Input" Index="#x6040" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Input" Index="#x6050" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Input" Index="#x6060" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Input" Index="#x6070" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+			</Pdo>
+			<Pdo Name="DIP Diagnosis" Index="#x1a01" Flags="#x0010" SyncMan="3">
+				<Entry Name="Wirebreak" Index="#x6001" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Wirebreak" Index="#x6011" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Wirebreak" Index="#x6021" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Wirebreak" Index="#x6031" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Wirebreak" Index="#x6041" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Wirebreak" Index="#x6051" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Wirebreak" Index="#x6061" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Wirebreak" Index="#x6071" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+			</Pdo>
+			<Pdo Name="DOS Diagnosis" Index="#x1a10" Flags="#x0010" SyncMan="3">
+				<Entry Name="Overcurrent" Index="#x6082" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Overload" Index="#x6082" Sub="#x02">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry>
+					<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+				</Entry>
+				<Entry Name="Short to 24V" Index="#x6082" Sub="#x04">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Overcurrent" Index="#x6092" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Overload" Index="#x6092" Sub="#x02">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry>
+					<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+				</Entry>
+				<Entry Name="Short to 24V" Index="#x6092" Sub="#x04">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Overcurrent" Index="#x60a2" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Overload" Index="#x60a2" Sub="#x02">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry>
+					<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+				</Entry>
+				<Entry Name="Short to 24V" Index="#x60a2" Sub="#x04">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Overcurrent" Index="#x60b2" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Overload" Index="#x60b2" Sub="#x02">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry>
+					<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+				</Entry>
+				<Entry Name="Short to 24V" Index="#x60b2" Sub="#x04">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Overcurrent" Index="#x60c2" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Overload" Index="#x60c2" Sub="#x02">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry>
+					<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+				</Entry>
+				<Entry Name="Short to 24V" Index="#x60c2" Sub="#x04">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Overcurrent" Index="#x60d2" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Overload" Index="#x60d2" Sub="#x02">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry>
+					<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+				</Entry>
+				<Entry Name="Short to 24V" Index="#x60d2" Sub="#x04">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Overcurrent" Index="#x60e2" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Overload" Index="#x60e2" Sub="#x02">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry>
+					<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+				</Entry>
+				<Entry Name="Short to 24V" Index="#x60e2" Sub="#x04">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Overcurrent" Index="#x60f2" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Overload" Index="#x60f2" Sub="#x02">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry>
+					<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+				</Entry>
+				<Entry Name="Short to 24V" Index="#x60f2" Sub="#x04">
+					<Type>BIT</Type>
+				</Entry>
+			</Pdo>
+			<Pdo Name="EFU Inputs" Index="#x1a20" Flags="#x0010" SyncMan="3">
+				<Entry Name="Warning" Index="#x6100" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Error" Index="#x6100" Sub="#x02">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Tripped" Index="#x6100" Sub="#x03">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Enabled" Index="#x6100" Sub="#x04">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry>
+					<Type GUID="{18071995-0000-0000-0000-00200000000A}">ARRAY [0..9] OF BIT</Type>
+				</Entry>
+				<Entry Name="Input cycle counter" Index="#x6100" Sub="#x0f">
+					<Type>BIT2</Type>
+				</Entry>
+				<Entry>
+					<Type GUID="{18071995-0000-0000-0000-002000000010}">ARRAY [0..1] OF BYTE</Type>
+				</Entry>
+				<Entry Name="Current" Index="#x6100" Sub="#x11">
+					<Type>REAL</Type>
+				</Entry>
+			</Pdo>
+			<Pdo Name="DEV Inputs Device" Index="#x1a30" Flags="#x0010" SyncMan="3">
+				<Entry>
+					<Type GUID="{18071995-0000-0000-0000-002000000002}">ARRAY [0..1] OF BIT</Type>
+				</Entry>
+				<Entry Name="Overtemperature" Index="#xf600" Sub="#x03">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry>
+					<Type GUID="{18071995-0000-0000-0000-002000000009}">ARRAY [0..8] OF BIT</Type>
+				</Entry>
+				<Entry Name="Diag" Index="#xf600" Sub="#x0d">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="TxPDO State" Index="#xf600" Sub="#x0e">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Input cycle counter" Index="#xf600" Sub="#x0f">
+					<Type>BIT2</Type>
+				</Entry>
+			</Pdo>
+			<Pdo Name="DEV Diag" Index="#x1a40" Flags="#x0010">
+				<Entry Name="Internal Temperature" Index="#xf900" Sub="#x02">
+					<Type>SINT</Type>
+				</Entry>
+				<Entry Name="DIO1" Index="#xf915" Sub="#x01">
+					<Type>UDINT</Type>
+				</Entry>
+				<Entry Name="DIO2" Index="#xf915" Sub="#x02">
+					<Type>UDINT</Type>
+				</Entry>
+				<Entry Name="DIO3" Index="#xf915" Sub="#x03">
+					<Type>UDINT</Type>
+				</Entry>
+				<Entry Name="DIO4" Index="#xf915" Sub="#x04">
+					<Type>UDINT</Type>
+				</Entry>
+				<Entry Name="DIO5" Index="#xf915" Sub="#x05">
+					<Type>UDINT</Type>
+				</Entry>
+				<Entry Name="DIO6" Index="#xf915" Sub="#x06">
+					<Type>UDINT</Type>
+				</Entry>
+				<Entry Name="DIO7" Index="#xf915" Sub="#x07">
+					<Type>UDINT</Type>
+				</Entry>
+				<Entry Name="DIO8" Index="#xf915" Sub="#x08">
+					<Type>UDINT</Type>
+				</Entry>
+				<Entry Name="Err" Index="#xf915" Sub="#x09">
+					<Type>UDINT</Type>
+				</Entry>
+				<Entry Name="Run" Index="#xf915" Sub="#x0a">
+					<Type>UDINT</Type>
+				</Entry>
+			</Pdo>
+			<Pdo Name="EFU Outputs" Index="#x1610" InOut="1" Flags="#x0011" SyncMan="2">
+				<Entry Name="Output" Index="#x7080" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Output" Index="#x7090" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Output" Index="#x70a0" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Output" Index="#x70b0" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Output" Index="#x70c0" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Output" Index="#x70d0" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Output" Index="#x70e0" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Output" Index="#x70f0" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+			</Pdo>
+			<Pdo Name="DIP Diagnosis" Index="#x1620" InOut="1" Flags="#x0011" SyncMan="2">
+				<Entry Name="Enable" Index="#x7100" Sub="#x01">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Control Via Process Data" Index="#x7100" Sub="#x02">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry Name="Reset" Index="#x7100" Sub="#x03">
+					<Type>BIT</Type>
+				</Entry>
+				<Entry>
+					<Type GUID="{18071995-0000-0000-0000-00200000000D}">ARRAY [0..12] OF BIT</Type>
+				</Entry>
+			</Pdo>
+		</EtherCAT>
+	</Box>
+</TcSmItem>

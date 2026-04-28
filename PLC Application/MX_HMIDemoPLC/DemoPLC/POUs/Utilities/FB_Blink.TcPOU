@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_Blink" Id="{b90a0b1b-8386-4429-80ec-fc97490cdc39}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Blink // creates a blinking bit with variable on and off time (Default 500ms off 500ms on) 
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	OnTimer		: TON := (PT := T#500MS); 
+	OffTimer	: TON := (PT := T#500MS);
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[OnTimer	(IN := NOT OffTimer.Q);
+OffTimer(IN := OnTimer.Q); 
+]]></ST>
+    </Implementation>
+    <Property Name="BlinkBit" Id="{b9af8ec5-da0e-42e6-8575-02358a181411}">
+      <Declaration><![CDATA[PROPERTY BlinkBit : Bool]]></Declaration>
+      <Get Name="Get" Id="{03be3ff6-f07d-4ed0-8761-5cbb7c21dbfb}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[BlinkBit := OnTimer.Q;
+]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Property Name="TimeOff" Id="{cc67cb05-7153-4af0-a485-ba92c667e6fa}">
+      <Declaration><![CDATA[PROPERTY TimeOff : Uint]]></Declaration>
+      <Set Name="Set" Id="{c6e40fad-5d05-498a-9d43-891f347e4c27}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[OffTimer.PT := UINT_TO_TIME(TimeOff);
+]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="TimeOn" Id="{bcdb5480-a483-4e70-8da8-650fb9f9f1ca}">
+      <Declaration><![CDATA[PROPERTY TimeOn : UINT // Time on [MS]
+]]></Declaration>
+      <Set Name="Set" Id="{3849f858-c718-43fa-b1c0-655c2697a8d6}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[OnTimer.PT := UINT_TO_TIME(TimeOn);
+]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+  </POU>
+</TcPlcObject>

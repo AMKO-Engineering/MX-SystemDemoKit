@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_PSU_Data" Id="{83f9f318-c8dc-4569-869f-fcc738644bb6}">
+    <Declaration><![CDATA[TYPE ST_PSU_Data :
+STRUCT
+	stPSUInputs		AT%I*	: ST_PSU_Inputs ;
+	stPSUOutputs	AT%Q*	: ST_PSU_Outputs; 
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

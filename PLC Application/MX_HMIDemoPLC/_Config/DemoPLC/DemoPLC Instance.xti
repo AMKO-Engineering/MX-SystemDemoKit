@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.22" ClassName="CTComPlcObjDef">
+	<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" XtvPath="DemoPLC\DemoPLC Instance.xtv" TmcPath="DemoPLC\DemoPLC.tmc">
+		<Name>__FILENAME__</Name>
+		<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+		<UnrestoredVarLinks ImportTime="2026-02-25T15:55:20">
+			<OwnerA Name="InputDst" Prefix="TIPC^DemoPLC^DemoPLC Instance" Type="1">
+				<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 14 (MB1200-0000)^Term 8 (MB1100-0002)^Term 20 (MO1008-0000-1111)">
+					<Link VarA="MAIN.St_MO1008_DIData.EFIInputs^bEnabled" TypeA="BOOL" InOutA="0" ParentTypeA="ST_EFU_Inputs" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="EFU Inputs^Enabled" Size="1" RestoreInfo="ANotFound"/>
+					<Link VarA="MAIN.St_MO1008_DIData.EFIInputs^bError" TypeA="BOOL" InOutA="0" ParentTypeA="ST_EFU_Inputs" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="EFU Inputs^Error" Size="1" RestoreInfo="ANotFound"/>
+					<Link VarA="MAIN.St_MO1008_DIData.EFIInputs^bTripped" TypeA="BOOL" InOutA="0" ParentTypeA="ST_EFU_Inputs" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="EFU Inputs^Tripped" Size="1" RestoreInfo="ANotFound"/>
+					<Link VarA="MAIN.St_MO1008_DIData.EFIInputs^bWarning" TypeA="BOOL" InOutA="0" ParentTypeA="ST_EFU_Inputs" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="EFU Inputs^Warning" Size="1" RestoreInfo="ANotFound"/>
+					<Link VarA="MAIN.St_MO1008_DIData.EFIInputs^fCurrent" TypeA="REAL" InOutA="0" ParentTypeA="ST_EFU_Inputs" GuidA="{18071995-0000-0000-0000-00000000000D}" VarB="EFU Inputs^Current" RestoreInfo="ANotFound"/>
+				</OwnerB>
+				<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 14 (MB1200-0000)^Term 8 (MB1100-0002)^Term 24 (MO2338-0000-1112)">
+					<Link VarA="MAIN.STD_MO2338_CombiData.EFIInputs^fCurrent" TypeA="REAL" InOutA="0" ParentTypeA="ST_EFU_Inputs" GuidA="{18071995-0000-0000-0000-00000000000D}" VarB="EFU Inputs^Current" RestoreInfo="ANotFound"/>
+					<Link VarA="MAIN.STD_MO2338_CombiData.ModuleDiagnostics^EFIInputs^bEnabled" TypeA="BOOL" InOutA="0" ParentTypeA="ST_EFU_Inputs" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="EFU Inputs^Enabled" Size="1" RestoreInfo="ANotFound"/>
+					<Link VarA="MAIN.STD_MO2338_CombiData.ModuleDiagnostics^EFIInputs^bError" TypeA="BOOL" InOutA="0" ParentTypeA="ST_EFU_Inputs" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="EFU Inputs^Error" Size="1" RestoreInfo="ANotFound"/>
+					<Link VarA="MAIN.STD_MO2338_CombiData.ModuleDiagnostics^EFIInputs^bTripped" TypeA="BOOL" InOutA="0" ParentTypeA="ST_EFU_Inputs" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="EFU Inputs^Tripped" Size="1" RestoreInfo="ANotFound"/>
+					<Link VarA="MAIN.STD_MO2338_CombiData.ModuleDiagnostics^EFIInputs^bWarning" TypeA="BOOL" InOutA="0" ParentTypeA="ST_EFU_Inputs" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="EFU Inputs^Warning" Size="1" RestoreInfo="ANotFound"/>
+				</OwnerB>
+			</OwnerA>
+			<OwnerA Name="OutputSrc" Prefix="TIPC^DemoPLC^DemoPLC Instance" Type="2">
+				<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 14 (MB1200-0000)^Term 8 (MB1100-0002)^Term 23 (MO2008-0000-1111)">
+					<Link VarA="MAIN.st_MO2008_DOData.EFIOutputs^ControlViaProcessData" TypeA="BOOL" InOutA="1" ParentTypeA="ST_EFU_Outputs" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="EFU Outputs^Control Via Process Data" Size="1" RestoreInfo="ANotFound"/>
+					<Link VarA="MAIN.st_MO2008_DOData.EFIOutputs^bEnable" TypeA="BOOL" InOutA="1" ParentTypeA="ST_EFU_Outputs" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="EFU Outputs^Enable" Size="1" RestoreInfo="ANotFound"/>
+					<Link VarA="MAIN.st_MO2008_DOData.EFIOutputs^bReset" TypeA="BOOL" InOutA="1" ParentTypeA="ST_EFU_Outputs" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="EFU Outputs^Reset" Size="1" RestoreInfo="ANotFound"/>
+				</OwnerB>
+				<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 14 (MB1200-0000)^Term 8 (MB1100-0002)^Term 24 (MO2338-0000-1112)">
+					<Link VarA="MAIN.STD_MO2338_CombiData.EFIOutputs^ControlViaProcessData" TypeA="BOOL" InOutA="1" ParentTypeA="ST_EFU_Outputs" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="DIP Diagnosis_1^Control Via Process Data" Size="1" RestoreInfo="ANotFound"/>
+					<Link VarA="MAIN.STD_MO2338_CombiData.EFIOutputs^bEnable" TypeA="BOOL" InOutA="1" ParentTypeA="ST_EFU_Outputs" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="DIP Diagnosis_1^Enable" Size="1" RestoreInfo="ANotFound"/>
+					<Link VarA="MAIN.STD_MO2338_CombiData.EFIOutputs^bReset" TypeA="BOOL" InOutA="1" ParentTypeA="ST_EFU_Outputs" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="DIP Diagnosis_1^Reset" Size="1" RestoreInfo="ANotFound"/>
+				</OwnerB>
+			</OwnerA>
+		</UnrestoredVarLinks>
+		<UnrestoredVarLinks ImportTime="2026-03-19T12:45:00">
+			<OwnerA Name="OutputSrc" Prefix="TIPC^DemoPLC^DemoPLC Instance" Type="2">
+				<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 14 (MB1200-0000)^Term 8 (MB1100-0002)^Term 11 (MO7221-9016-1114)">
+					<Link VarA="MAIN.fbDemoMotion.bSTOFromPLC" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Module 1 (SafetyMDSingle)^Standard Outputdata^Standard In Var 6" Size="1" RestoreInfo="ANotFound"/>
+				</OwnerB>
+			</OwnerA>
+		</UnrestoredVarLinks>
+		<Contexts>
+			<Context>
+				<Id>0</Id>
+				<Name>PlcTask</Name>
+				<ManualConfig>
+					<OTCID>#x02010030</OTCID>
+				</ManualConfig>
+				<Priority>20</Priority>
+				<CycleTime>10000000</CycleTime>
+			</Context>
+		</Contexts>
+		<TaskPouOids>
+			<TaskPouOid Prio="20" OTCID="#x08502001"/>
+		</TaskPouOids>
+	</Instance>
+	<Mappings>
+		<OwnerA>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 14 (MB1200-0000)^Term 8 (MB1100-0002)">
+				<Link VarA="PlcTask Inputs^MAIN.stBleuToothData.Status^BleutoothEnabled" VarB="BTG Inputs^Status^Bluetooth Enabled"/>
+				<Link VarA="PlcTask Inputs^MAIN.stBleuToothData.Status^Connected" VarB="BTG Inputs^Status^Connected"/>
+				<Link VarA="PlcTask Inputs^MAIN.stBleuToothData.Status^Diag" VarB="BTG Inputs^Status^Diag"/>
+				<Link VarA="PlcTask Inputs^MAIN.stBleuToothData.Status^DonglePresent" VarB="BTG Inputs^Status^Dongle Present"/>
+				<Link VarA="PlcTask Inputs^MAIN.stBleuToothData.Status^Pairing" VarB="BTG Inputs^Status^Pairing Active"/>
+				<Link VarA="PlcTask Outputs^MAIN.stBleuToothData.control^ActivatePairingMode" VarB="BTG Outputs^Control^Activate Pairing" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.stBleuToothData.control^EnableBleutoothDiagnosis" VarB="BTG Outputs^Control^Enable Bluetooth" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 14 (MB1200-0000)^Term 8 (MB1100-0002)^Term 11 (MO7221-9016-1114)">
+				<Link VarA="PlcTask Inputs^MAIN.fbDemoMotion.bSafety_Error" VarB="Module 1 (SafetyMDSingle)^Standard Inputdata^Standard Out Var 9" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbDemoMotion.bSafety_OK" VarB="Module 1 (SafetyMDSingle)^Standard Inputdata^Standard Out Var 8" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.bRunSafety" VarB="Module 1 (SafetyMDSingle)^Standard Outputdata^Standard In Var 2" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbDemoMotion.bSafety_ErrorAckFromPLC" VarB="Module 1 (SafetyMDSingle)^Standard Outputdata^Standard In Var 1" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbDemoMotion.bSafety_ErrorAckFromPLC" VarB="Module 1 (SafetyMDSingle)^Standard Outputdata^Standard In Var 7" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbDemoMotion.bSafety_STOFromPLC" VarB="Module 1 (SafetyMDSingle)^Standard Outputdata^Standard In Var 6" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 14 (MB1200-0000)^Term 8 (MB1100-0002)^Term 16 (MS1010-1002-1334)">
+				<Link VarA="PlcTask Inputs^MAIN.stPSUData.stPSUInputs^DCOk" VarB="PSU Inputs^DC OK" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.stPSUData.stPSUInputs^Overrange" VarB="PSU Inputs^Overrange" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.stPSUData.stPSUInputs^bError" VarB="PSU Inputs^Error" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.stPSUData.stPSUInputs^bI2TWarning" VarB="PSU Inputs^I2T Warning" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.stPSUData.stPSUInputs^bWarning" VarB="PSU Inputs^Warning" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.stPSUData.stPSUInputs^fActualOutputCurrent" VarB="PSU Inputs^Output Current"/>
+				<Link VarA="PlcTask Inputs^MAIN.stPSUData.stPSUInputs^fActualOutputVoltage" VarB="PSU Inputs^Output Voltage"/>
+				<Link VarA="PlcTask Inputs^MAIN.stPSUData.stPSUInputs^nActualI2TUtilization" VarB="PSU Inputs^I2T Utilization"/>
+				<Link VarA="PlcTask Inputs^MAIN.stPSUData.stPSUInputs^nInfoData1" VarB="PSU Inputs^Info Data 1"/>
+				<Link VarA="PlcTask Inputs^MAIN.stPSUData.stPSUInputs^nInfoData2" VarB="PSU Inputs^Info Data 2"/>
+				<Link VarA="PlcTask Outputs^MAIN.stPSUData.stPSUOutputs^bDisableOutput" VarB="PSU Outputs^Disable Output" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.stPSUData.stPSUOutputs^bReset" VarB="PSU Outputs^Reset" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 14 (MB1200-0000)^Term 8 (MB1100-0002)^Term 18 (MB1120)^Term 19 (MS4208-2003-1112)">
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFUInputsDevice^bDiag" VarB="EFU Device Inputs^Diag" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFUInputsDevice^bError" VarB="EFU Device Inputs^Error" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFUInputsDevice^bOvertemperatureWarning" VarB="EFU Device Inputs^Overtemperature Warning" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFUInputsDevice^bUnderVoltage_Up" VarB="EFU Device Inputs^Undervoltage Up" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFUInputsDevice^bUnderVoltage_Us" VarB="EFU Device Inputs^Undervoltage Us" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFUInputsDevice^bWarning" VarB="EFU Device Inputs^Warning" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFUInputsDevice^fTotalCurrent" VarB="EFU Device Inputs^Total Current"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFUUs.EFUInputs^bEnabled" VarB="EFU Us Inputs^Enabled" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFUUs.EFUInputs^bError" VarB="EFU Us Inputs^Error" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFUUs.EFUInputs^bTripped" VarB="EFU Us Inputs^Tripped" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFUUs.EFUInputs^bWarning" VarB="EFU Us Inputs^Warning" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFUUs.EFUInputs^fCurrent" VarB="EFU Us Inputs^Current"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFU_Up1.EFUInputs^bEnabled" VarB="EFU Up1 Inputs^Enabled" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFU_Up1.EFUInputs^bError" VarB="EFU Up1 Inputs^Error" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFU_Up1.EFUInputs^bTripped" VarB="EFU Up1 Inputs^Tripped" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFU_Up1.EFUInputs^bWarning" VarB="EFU Up1 Inputs^Warning" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFU_Up1.EFUInputs^fCurrent" VarB="EFU Up1 Inputs^Current"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFU_Up2.EFUInputs^bEnabled" VarB="EFU Up2 Inputs^Enabled" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFU_Up2.EFUInputs^bError" VarB="EFU Up2 Inputs^Error" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFU_Up2.EFUInputs^bTripped" VarB="EFU Up2 Inputs^Tripped" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFU_Up2.EFUInputs^bWarning" VarB="EFU Up2 Inputs^Warning" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MS4208_EtherCATOut.stEFU_Up2.EFUInputs^fCurrent" VarB="EFU Up2 Inputs^Current"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MS4208_EtherCATOut.stEFUUs.EFUOutputs^ControlViaProcessData" VarB="EFU Us Outputs^Control via Process Data" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MS4208_EtherCATOut.stEFUUs.EFUOutputs^bEnable" VarB="EFU Us Outputs^Enable" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MS4208_EtherCATOut.stEFUUs.EFUOutputs^bReset" VarB="EFU Us Outputs^Reset" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MS4208_EtherCATOut.stEFU_Up1.EFUOutputs^ControlViaProcessData" VarB="EFU Up1 Outputs^Control via Process Data" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MS4208_EtherCATOut.stEFU_Up1.EFUOutputs^bEnable" VarB="EFU Up1 Outputs^Enable" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MS4208_EtherCATOut.stEFU_Up1.EFUOutputs^bReset" VarB="EFU Up1 Outputs^Reset" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MS4208_EtherCATOut.stEFU_Up2.EFUOutputs^ControlViaProcessData" VarB="EFU Up2 Outputs^Control via Process Data" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MS4208_EtherCATOut.stEFU_Up2.EFUOutputs^bEnable" VarB="EFU Up2 Outputs^Enable" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MS4208_EtherCATOut.stEFU_Up2.EFUOutputs^bReset" VarB="EFU Up2 Outputs^Reset" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 14 (MB1200-0000)^Term 8 (MB1100-0002)^Term 20 (MO1008-0000-1111)">
+				<Link VarA="PlcTask Inputs^MAIN.St_MO1008_DIData.EFUInputs^bEnabled" VarB="EFU Inputs^Enabled" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.St_MO1008_DIData.EFUInputs^bError" VarB="EFU Inputs^Error" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.St_MO1008_DIData.EFUInputs^bTripped" VarB="EFU Inputs^Tripped" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.St_MO1008_DIData.EFUInputs^bWarning" VarB="EFU Inputs^Warning" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.St_MO1008_DIData.EFUInputs^fCurrent" VarB="EFU Inputs^Current"/>
+				<Link VarA="PlcTask Outputs^MAIN.St_MO1008_DIData.ModuleDiagnostics.EFUOutputs^ControlViaProcessData" VarB="EFU Outputs^Control Via Process Data" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.St_MO1008_DIData.ModuleDiagnostics.EFUOutputs^bEnable" VarB="EFU Outputs^Enable" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.St_MO1008_DIData.ModuleDiagnostics.EFUOutputs^bReset" VarB="EFU Outputs^Reset" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 14 (MB1200-0000)^Term 8 (MB1100-0002)^Term 23 (MO2008-0000-1111)">
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.EFUInputs^bEnabled" VarB="EFU Inputs^Enabled" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.EFUInputs^bError" VarB="EFU Inputs^Error" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.EFUInputs^bTripped" VarB="EFU Inputs^Tripped" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.EFUInputs^bWarning" VarB="EFU Inputs^Warning" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.ModuleDiagnostics.EFUInputs^fCurrent" VarB="EFU Inputs^Current"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_0^PowersupplyMissing" VarB="DOS Diagnosis^Power Supply Missing" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_0^bOpenLoad" VarB="DOS Diagnosis^Open Load" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_0^bOvercurrent" VarB="DOS Diagnosis^Overcurrent" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_0^bOverload" VarB="DOS Diagnosis^Overload" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_0^bShortTo24V" VarB="DOS Diagnosis^Short to 24V" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_1^PowersupplyMissing" VarB="DOS Diagnosis^Power Supply Missing_1" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_1^bOpenLoad" VarB="DOS Diagnosis^Open Load_1" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_1^bOvercurrent" VarB="DOS Diagnosis^Overcurrent_1" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_1^bOverload" VarB="DOS Diagnosis^Overload_1" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_1^bShortTo24V" VarB="DOS Diagnosis^Short to 24V_1" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_2^PowersupplyMissing" VarB="DOS Diagnosis^Power Supply Missing_2" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_2^bOpenLoad" VarB="DOS Diagnosis^Open Load_2" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_2^bOvercurrent" VarB="DOS Diagnosis^Overcurrent_2" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_2^bOverload" VarB="DOS Diagnosis^Overload_2" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_2^bShortTo24V" VarB="DOS Diagnosis^Short to 24V_2" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_3^PowersupplyMissing" VarB="DOS Diagnosis^Power Supply Missing_3" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_3^bOpenLoad" VarB="DOS Diagnosis^Open Load_3" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_3^bOvercurrent" VarB="DOS Diagnosis^Overcurrent_3" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_3^bOverload" VarB="DOS Diagnosis^Overload_3" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_3^bShortTo24V" VarB="DOS Diagnosis^Short to 24V_3" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_4^PowersupplyMissing" VarB="DOS Diagnosis^Power Supply Missing_4" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_4^bOpenLoad" VarB="DOS Diagnosis^Open Load_4" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_4^bOvercurrent" VarB="DOS Diagnosis^Overcurrent_4" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_4^bOverload" VarB="DOS Diagnosis^Overload_4" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_4^bShortTo24V" VarB="DOS Diagnosis^Short to 24V_4" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_5^PowersupplyMissing" VarB="DOS Diagnosis^Power Supply Missing_5" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_5^bOpenLoad" VarB="DOS Diagnosis^Open Load_5" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_5^bOvercurrent" VarB="DOS Diagnosis^Overcurrent_5" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_5^bOverload" VarB="DOS Diagnosis^Overload_5" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_5^bShortTo24V" VarB="DOS Diagnosis^Short to 24V_5" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_6^PowersupplyMissing" VarB="DOS Diagnosis^Power Supply Missing_6" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_6^bOpenLoad" VarB="DOS Diagnosis^Open Load_6" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_6^bOvercurrent" VarB="DOS Diagnosis^Overcurrent_6" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_6^bOverload" VarB="DOS Diagnosis^Overload_6" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_6^bShortTo24V" VarB="DOS Diagnosis^Short to 24V_6" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_7^PowersupplyMissing" VarB="DOS Diagnosis^Power Supply Missing_7" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_7^bOpenLoad" VarB="DOS Diagnosis^Open Load_7" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_7^bOvercurrent" VarB="DOS Diagnosis^Overcurrent_7" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_7^bOverload" VarB="DOS Diagnosis^Overload_7" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.st_MO2008_DOData.OutputDiagnostics^Chanel_7^bShortTo24V" VarB="DOS Diagnosis^Short to 24V_7" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MO2008_DOData.ModuleDiagnostics.EFUOutputs^ControlViaProcessData" VarB="EFU Outputs^Control Via Process Data" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MO2008_DOData.ModuleDiagnostics.EFUOutputs^bEnable" VarB="EFU Outputs^Enable" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MO2008_DOData.ModuleDiagnostics.EFUOutputs^bReset" VarB="EFU Outputs^Reset" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MO2008_DOData.OutputStatus^bOutputCh1" VarB="DOS Output^Output" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MO2008_DOData.OutputStatus^bOutputCh2" VarB="DOS Output^Output_1" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MO2008_DOData.OutputStatus^bOutputCh3" VarB="DOS Output^Output_2" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MO2008_DOData.OutputStatus^bOutputCh4" VarB="DOS Output^Output_3" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MO2008_DOData.OutputStatus^bOutputCh5" VarB="DOS Output^Output_4" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MO2008_DOData.OutputStatus^bOutputCh6" VarB="DOS Output^Output_5" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MO2008_DOData.OutputStatus^bOutputCh7" VarB="DOS Output^Output_6" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.st_MO2008_DOData.OutputStatus^bOutputCh8" VarB="DOS Output^Output_7" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 14 (MB1200-0000)^Term 8 (MB1100-0002)^Term 24 (MO2338-0000-1112)">
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DIDiagnostics^Chanel_0^bWirebreak" VarB="DIP Diagnosis^Wirebreak" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DIDiagnostics^Chanel_1^bWirebreak" VarB="DIP Diagnosis^Wirebreak_1" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DIDiagnostics^Chanel_2^bWirebreak" VarB="DIP Diagnosis^Wirebreak_2" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DIDiagnostics^Chanel_3^bWirebreak" VarB="DIP Diagnosis^Wirebreak_3" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DIDiagnostics^Chanel_4^bWirebreak" VarB="DIP Diagnosis^Wirebreak_4" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DIDiagnostics^Chanel_5^bWirebreak" VarB="DIP Diagnosis^Wirebreak_5" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DIDiagnostics^Chanel_6^bWirebreak" VarB="DIP Diagnosis^Wirebreak_6" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DIDiagnostics^Chanel_7^bWirebreak" VarB="DIP Diagnosis^Wirebreak_7" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_0^bOvercurrent" VarB="DOS Diagnosis^Overcurrent" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_0^bOverload" VarB="DOS Diagnosis^Overload" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_0^bShortTo24V" VarB="DOS Diagnosis^Short to 24V" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_1^bOvercurrent" VarB="DOS Diagnosis^Overcurrent_1" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_1^bOverload" VarB="DOS Diagnosis^Overload_1" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_1^bShortTo24V" VarB="DOS Diagnosis^Short to 24V_1" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_2^bOvercurrent" VarB="DOS Diagnosis^Overcurrent_2" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_2^bOverload" VarB="DOS Diagnosis^Overload_2" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_2^bShortTo24V" VarB="DOS Diagnosis^Short to 24V_2" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_3^bOvercurrent" VarB="DOS Diagnosis^Overcurrent_3" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_3^bOverload" VarB="DOS Diagnosis^Overload_3" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_3^bShortTo24V" VarB="DOS Diagnosis^Short to 24V_3" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_4^bOvercurrent" VarB="DOS Diagnosis^Overcurrent_4" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_4^bOverload" VarB="DOS Diagnosis^Overload_4" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_4^bShortTo24V" VarB="DOS Diagnosis^Short to 24V_4" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_5^bOvercurrent" VarB="DOS Diagnosis^Overcurrent_5" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_5^bOverload" VarB="DOS Diagnosis^Overload_5" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_5^bShortTo24V" VarB="DOS Diagnosis^Short to 24V_5" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_6^bOvercurrent" VarB="DOS Diagnosis^Overcurrent_6" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_6^bOverload" VarB="DOS Diagnosis^Overload_6" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_6^bShortTo24V" VarB="DOS Diagnosis^Short to 24V_6" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_7^bOvercurrent" VarB="DOS Diagnosis^Overcurrent_7" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_7^bOverload" VarB="DOS Diagnosis^Overload_7" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.DODisgnostics^Chanel_7^bShortTo24V" VarB="DOS Diagnosis^Short to 24V_7" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.EFUInputs^bError" VarB="DEV Inputs Device^Diag" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.EFUInputs^bWarning" VarB="DEV Inputs Device^Overtemperature" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.EFUInputs^fCurrent" VarB="EFU Inputs^Current"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.InputStatus^bInputCh1" VarB="DIP Input^Input" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.InputStatus^bInputCh2" VarB="DIP Input^Input_1" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.InputStatus^bInputCh3" VarB="DIP Input^Input_2" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.InputStatus^bInputCh4" VarB="DIP Input^Input_3" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.InputStatus^bInputCh5" VarB="DIP Input^Input_4" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.InputStatus^bInputCh6" VarB="DIP Input^Input_5" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.InputStatus^bInputCh7" VarB="DIP Input^Input_6" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.InputStatus^bInputCh8" VarB="DIP Input^Input_7" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.ModuleDiagnostics^EFUInputs^bEnabled" VarB="EFU Inputs^Enabled" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.ModuleDiagnostics^EFUInputs^bError" VarB="EFU Inputs^Error" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.ModuleDiagnostics^EFUInputs^bTripped" VarB="EFU Inputs^Tripped" Size="1"/>
+				<Link VarA="PlcTask Inputs^MAIN.STD_MO2338_CombiData.ModuleDiagnostics^EFUInputs^bWarning" VarB="EFU Inputs^Warning" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.STD_MO2338_CombiData.OutputStatus^bOutputCh1" VarB="EFU Outputs^Output" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.STD_MO2338_CombiData.OutputStatus^bOutputCh2" VarB="EFU Outputs^Output_1" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.STD_MO2338_CombiData.OutputStatus^bOutputCh3" VarB="EFU Outputs^Output_2" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.STD_MO2338_CombiData.OutputStatus^bOutputCh4" VarB="EFU Outputs^Output_3" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.STD_MO2338_CombiData.OutputStatus^bOutputCh5" VarB="EFU Outputs^Output_4" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.STD_MO2338_CombiData.OutputStatus^bOutputCh6" VarB="EFU Outputs^Output_5" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.STD_MO2338_CombiData.OutputStatus^bOutputCh7" VarB="EFU Outputs^Output_6" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.STD_MO2338_CombiData.OutputStatus^bOutputCh8" VarB="EFU Outputs^Output_7" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^Axis 2">
+				<Link VarA="PlcTask Inputs^MAIN.fbDemoMotion.ServoAxis.NcToPlc" VarB="Outputs^ToPlc"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbDemoMotion.ServoAxis.PlcToNc" VarB="Inputs^FromPlc"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
+</TcSmItem>

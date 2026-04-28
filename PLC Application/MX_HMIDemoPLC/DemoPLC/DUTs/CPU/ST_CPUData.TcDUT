@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_CPUData" Id="{d8653d1d-6291-47bd-8681-3d01f16b9ddd}">
+    <Declaration><![CDATA[TYPE ST_CPUData :
+STRUCT
+	stTemperatureData 	: ST_CPUTemperature	;
+	stUsageData			: ST_CPUUsage		;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

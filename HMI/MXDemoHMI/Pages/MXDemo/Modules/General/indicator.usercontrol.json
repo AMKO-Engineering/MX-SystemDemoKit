@@ -1,0 +1,41 @@
+{
+  "parameters": [
+    {
+      "allowSymbolExpressionsInObject": false,
+      "requiredOnCompile": false,
+      "bindable": true,
+      "propertySetterName": "setText",
+      "propertyGetterName": "getText",
+      "refTo": "",
+      "name": "data-tchmi-text",
+      "displayName": "Text",
+      "visible": true,
+      "type": "tchmi:general#/definitions/String",
+      "category": "",
+      "description": "Text to be displayed with next to the button",
+      "readOnly": false,
+      "heritable": true,
+      "propertyName": "Text"
+    },
+    {
+      "allowSymbolExpressionsInObject": false,
+      "requiredOnCompile": false,
+      "bindable": true,
+      "propertySetterName": "setIndicatorStatus",
+      "propertyGetterName": "getIndicatorStatus",
+      "refTo": "",
+      "name": "data-tchmi-indicatorstatus",
+      "displayName": "IndicatorStatus",
+      "visible": true,
+      "type": "tchmi:general#/definitions/Boolean",
+      "category": "",
+      "description": "Status Boolean for indicator light",
+      "readOnly": false,
+      "heritable": true,
+      "propertyName": "IndicatorStatus"
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.229/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": "indicatorTextAndBool"
+}

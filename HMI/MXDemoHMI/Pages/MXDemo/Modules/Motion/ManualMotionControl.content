@@ -1,0 +1,5 @@
+<div id="ManualMotionControl" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width-mode="Parent" data-tchmi-height-mode="Parent" data-tchmi-right="0" data-tchmi-bottom="0">
+
+<div id="TcHmiMotionControl_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiMotion.TcHmiMotionControl" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-right-unit="%" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-halt="%f%%/f%" data-tchmi-nc-task="NC-Task1" data-tchmi-main-nc="NC">
+</div>
+</div>

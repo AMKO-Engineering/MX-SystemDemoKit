@@ -1,0 +1,41 @@
+{
+  "parameters": [
+    {
+      "allowSymbolExpressionsInObject": false,
+      "requiredOnCompile": false,
+      "bindable": true,
+      "propertySetterName": "setEFUInputs",
+      "propertyGetterName": "getEFUInputs",
+      "refTo": "",
+      "name": "data-tchmi-efuinputs",
+      "displayName": "EFUInputs",
+      "visible": true,
+      "type": "tchmi:server#/definitions/ADS-PLC1.ST_EFU_Inputs",
+      "category": "",
+      "description": "",
+      "readOnly": false,
+      "heritable": true,
+      "propertyName": "EFUInputs"
+    },
+    {
+      "allowSymbolExpressionsInObject": false,
+      "requiredOnCompile": false,
+      "bindable": true,
+      "propertySetterName": "setEFUOutputs",
+      "propertyGetterName": "getEFUOutputs",
+      "refTo": "",
+      "name": "data-tchmi-efuoutputs",
+      "displayName": "EFUOutputs",
+      "visible": true,
+      "type": "tchmi:server#/definitions/ADS-PLC1.ST_EFU_Outputs",
+      "category": "",
+      "description": "",
+      "readOnly": false,
+      "heritable": true,
+      "propertyName": "EFUOutputs"
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../../../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.258/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

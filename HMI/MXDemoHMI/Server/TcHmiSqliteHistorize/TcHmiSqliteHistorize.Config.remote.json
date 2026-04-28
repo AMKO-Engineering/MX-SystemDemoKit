@@ -1,0 +1,139 @@
+{
+    "enableBackup": false,
+    "historizedSymbolList": {
+        "ADS.PLC1.MAIN.fbMotionControl.ServoAxis.NcToPlc.ActPos": {
+            "interval": "PT0.1S",
+            "maxEntries": 1000,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "ADS.PLC1.MAIN.fbMotionControl.ServoAxis.NcToPlc.ActTorque": {
+            "interval": "PT0.1S",
+            "maxEntries": 1000,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "ADS.PLC1.MAIN.fbMotionControl.ServoAxis.NcToPlc.ActVelo": {
+            "interval": "PT0.1S",
+            "maxEntries": 1000,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "ADS.PLC1.MAIN.fbMotionControl.ServoAxis.PlcToNc.ExtSetPos": {
+            "interval": "PT0.1S",
+            "maxEntries": 1000,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "ADS.PLC1.MAIN.stCpuData.stUsageData.nCPUUsage": {
+            "interval": "PT0.5S",
+            "maxEntries": 1000,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "ADS.PLC1.MAIN.stCpuData.stUsageData.nLimitCPUUsage": {
+            "interval": "PT0.5S",
+            "maxEntries": 1000,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "ADS.PLC1.MAIN.stCpuData.stUsageData.nMaxCPUUsage": {
+            "interval": "PT0.5S",
+            "maxEntries": 1000,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "ADS.PLC1.MAIN.stPSUData.fActualOutputCurrent": {
+            "interval": "PT0.5S",
+            "maxEntries": 1000,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "ADS.PLC1.MAIN.stPSUData.fActualOutputVoltage": {
+            "interval": "PT0.5S",
+            "maxEntries": 1000,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "ADS.PLC1.MAIN.stPSUData.nActualI2TUtilization": {
+            "interval": "PT0.5S",
+            "maxEntries": 1000,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "LogActVelo": {
+            "interval": "PT0.1S",
+            "maxEntries": 100,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "LogExtSetPos": {
+            "interval": "PT0.1S",
+            "maxEntries": 100,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "Log_MotionActPos": {
+            "interval": "PT0.1S",
+            "maxEntries": 100,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "Log_MotionActTorque": {
+            "interval": "PT0.1S",
+            "maxEntries": 100,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "Log_fActualOutputCurrent": {
+            "interval": "PT0.25S",
+            "maxEntries": 40,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "Log_fActualOutputVoltage": {
+            "interval": "PT0.25S",
+            "maxEntries": 40,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "Log_nActualI2TUtilization": {
+            "interval": "PT0.25S",
+            "maxEntries": 40,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "Log_nCPUUsage": {
+            "interval": "PT0.25S",
+            "maxEntries": 40,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "Log_nLimitCPUUsage": {
+            "interval": "PT0.25S",
+            "maxEntries": 40,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "Log_nMaxCPUUsage": {
+            "interval": "PT0.25S",
+            "maxEntries": 40,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "PSUI2TUtilization": {
+            "interval": "PT1S",
+            "maxEntries": 60,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "fActualOutputCurrent": {
+            "interval": "PT1S",
+            "maxEntries": 1000,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        }
+    },
+    "inMemory": false,
+    "maxBackups": 1
+}

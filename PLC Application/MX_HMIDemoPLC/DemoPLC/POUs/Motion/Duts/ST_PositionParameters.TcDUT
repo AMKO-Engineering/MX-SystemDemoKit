@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_PositionParameters" Id="{23ef4253-cd80-4a86-aeab-c62bc6a2bc6e}">
+    <Declaration><![CDATA[TYPE ST_PositionParameters : // Full positioning command parameters
+STRUCT
+	fTargetPos		: LREAL;
+	fVelocity		: LREAL;
+	fAcceleration	: LREAL;
+	fDeceleration	: LREAL; 
+	fJerk			: LREAL;
+	eBuffermode		: MC_BufferMode;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_MO2008_DO" Id="{eb77f749-b506-4e57-823a-edbc58c150d6}">
+    <Declaration><![CDATA[TYPE ST_MO2008_DO EXTENDS ST_EFU_Data :
+STRUCT
+	OutputStatus		AT%Q*	: ST_DOS_Output		;
+	OutputDiagnostics	AT%I*	: ST_DOS_Diagnosis	;
+	ModuleDiagnostics	: ST_EFU_Data		; 
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

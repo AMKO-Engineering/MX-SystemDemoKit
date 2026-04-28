@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_CPUTemperature" Id="{3bc0e2fe-44d0-45b7-b003-b162e05c48fd}">
+    <Declaration><![CDATA[TYPE ST_CPUTemperature :
+STRUCT
+	// temperature
+	nCPUCurrentTemparature	: INT ; // The current temperature [°C] of the CPU core.
+	nCPUMaximumTemperature	: INT ; // The maximum temperature [°C] of the CPU core that has been observed since the TwinCAT XAR start.
+	nCPUTemperatureLimit	: INT	:= 70 ; // The temperature limit [°C] of the CPU core. Exceeding this limit leads to frequency throttling of the core.
+	bInThermalThrottling	: BOOL	; // Is TRUE if one of the real-time cores is currently throttling its frequency due to the temperature limits being exceeded.
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

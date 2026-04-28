@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_TaskData" Id="{70495082-e389-491c-99f6-aa0630dd23e0}">
+    <Declaration><![CDATA[TYPE ST_TaskData :
+STRUCT
+	CycleTime 		: LREAL;
+	LastExecTime	: LREAL;
+	SystemLatency	: LREAL; 
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

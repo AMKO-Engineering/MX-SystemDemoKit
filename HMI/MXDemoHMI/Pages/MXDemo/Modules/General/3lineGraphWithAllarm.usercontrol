@@ -1,0 +1,108 @@
+<div id="3lineGraphWithAllarm" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500">
+
+<div id="3LineGraphWithAllarm" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTrendLineChart" data-tchmi-end="Latest" data-tchmi-height-unit="%" data-tchmi-left-unit="%" data-tchmi-start="First" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-x-axis-name="x-axis 1" data-tchmi-x-sub-tick-steps="4" data-tchmi-y-sub-tick-steps="4" data-tchmi-right-unit="%" data-tchmi-bottom-unit="%" data-tchmi-left="0" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-show-y-sub-ticks="True" data-tchmi-show-menu-bar="True" data-tchmi-show-grid="True" data-tchmi-show-legend="True" data-tchmi-x-show-labels="False" data-tchmi-show-x-axis="True">
+<script data-tchmi-target-attribute="data-tchmi-y-axis" type="application/json">
+[
+  {
+    "id": 1,
+    "showAxis": true,
+    "position": "Left",
+    "logarithmicScale": false,
+    "axisLabeling": "Number",
+    "showLabels": true,
+    "mainTickMinValue": 0.0,
+    "mainTickMaxValue": 100.0,
+    "showAxisName": true,
+    "axisName": "%pp%YAxisName_1%/pp%",
+    "axisNameFontSize": 15,
+    "axisNameFontSizeUnit": "px",
+    "axisNameFontWeight": "Bold",
+    "decimalPlaces": 2,
+    "autoScaling": true,
+    "showAxisIfNoData": true,
+    "labelFontColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisLabelFontColor%/tr%",
+    "axisColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisColor%/tr%",
+    "axisNameFontColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisNameFontColor%/tr%"
+  },
+  {
+    "id": 2,
+    "showAxis": false,
+    "position": "Left",
+    "axisLabeling": "Number",
+    "showLabels": false,
+    "showAxisName": false,
+    "axisName": "%pp%YAxisName_2%/pp%",
+    "autoScaling": true,
+    "showAxisIfNoData": false,
+    "labelFontColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisLabelFontColor%/tr%",
+    "axisColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisColor%/tr%",
+    "axisNameFontColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisNameFontColor%/tr%"
+  },
+  {
+    "id": 3,
+    "showAxis": false,
+    "position": "Left",
+    "showLabels": false,
+    "showAxisName": false,
+    "axisName": "%pp%YAxisName_3%/pp%",
+    "autoScaling": true,
+    "showAxisIfNoData": false,
+    "labelFontColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisLabelFontColor%/tr%",
+    "axisColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisColor%/tr%",
+    "axisNameFontColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisNameFontColor%/tr%"
+  }
+]
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-line-graph-descriptions" type="application/json">
+[
+  {
+    "yAxisId": 1,
+    "symbol": "\"YAxisValue_1\"",
+    "lineWidth": 1,
+    "legendName": "%pp%YAxisName_1%/pp%",
+    "defaultVisibility": true,
+    "pointDot": false,
+    "pointDotRadius": 3,
+    "pointDotStrokeWidth": 1,
+    "pointDotInStopMode": false,
+    "lineColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::LineGraphDescriptionLineColor%/tr%",
+    "pointDotFillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::LineGraphDescriptionPointDotFillColor%/tr%",
+    "pointDotStrokeColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::LineGraphDescriptionPointDotStrokeColor%/tr%",
+    "fillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionFillColor%/tr%"
+  },
+  {
+    "yAxisId": 2,
+    "symbol": "%f%\"YAxisValue_2\"%/f%",
+    "lineWidth": 1,
+    "legendName": "%pp%YAxisName_2%/pp%",
+    "defaultVisibility": true,
+    "pointDot": false,
+    "pointDotRadius": 3,
+    "pointDotStrokeWidth": 1,
+    "pointDotInStopMode": false,
+    "lineColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::LineGraphDescriptionLineColor%/tr%",
+    "pointDotFillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::LineGraphDescriptionPointDotFillColor%/tr%",
+    "pointDotStrokeColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::LineGraphDescriptionPointDotStrokeColor%/tr%",
+    "fillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionFillColor%/tr%"
+  },
+  {
+    "yAxisId": 3,
+    "symbol": "\"YAxisValue_3\"",
+    "lineWidth": 1,
+    "legendName": "%pp%YAxisName_3%/pp%",
+    "defaultVisibility": true,
+    "pointDot": false,
+    "pointDotRadius": 3,
+    "pointDotStrokeWidth": 1,
+    "pointDotInStopMode": false,
+    "lineColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::LineGraphDescriptionLineColor%/tr%",
+    "pointDotFillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::LineGraphDescriptionPointDotFillColor%/tr%",
+    "pointDotStrokeColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::LineGraphDescriptionPointDotStrokeColor%/tr%",
+    "fillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionFillColor%/tr%"
+  }
+]
+</script>
+</div>
+</div>

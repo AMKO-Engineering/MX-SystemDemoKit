@@ -1,0 +1,5 @@
+<div id="StartPage_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-width-mode="Parent" data-tchmi-height-mode="Parent" data-tchmi-left="0" data-tchmi-top="0" data-tchmi-right="0" data-tchmi-bottom="0">
+
+<div id="TcHmiImage_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-src="Images/Presentation/MX Overzicht bijgesneden.svg" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-right="10" data-tchmi-bottom="0" data-tchmi-right-unit="%">
+</div>
+</div>

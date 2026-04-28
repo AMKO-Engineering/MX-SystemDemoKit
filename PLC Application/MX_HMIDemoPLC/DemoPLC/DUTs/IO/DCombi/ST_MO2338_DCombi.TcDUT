@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_MO2338_DCombi" Id="{bbeb9d80-8fad-4f65-8d93-520ff6e5623b}">
+    <Declaration><![CDATA[TYPE ST_MO2338_DCombi EXTENDS ST_EFU_Data :
+STRUCT
+	InputStatus 		AT%I* : ST_DIS_Inputs		;
+	DIDiagnostics		AT%I* : ST_DIS_Diagnosis	;
+	
+	OutputStatus		AT%Q* : ST_DOS_Output		;
+	DODisgnostics		AT%I* : ST_DOS_Diagnosis	;	
+
+	ModuleDiagnostics	AT%I*	: ST_EFU_Data		; 
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

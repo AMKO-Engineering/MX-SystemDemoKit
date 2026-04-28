@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_DIS_Chanel_Diagnosis" Id="{242ceead-e935-4bf0-a04e-e57f7c8bd04c}">
+    <Declaration><![CDATA[TYPE ST_DIS_Chanel_Diagnosis :
+STRUCT
+	bWirebreak 				: BOOL;
+	bPowerSupplymissing	: BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

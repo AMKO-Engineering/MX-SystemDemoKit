@@ -1,0 +1,111 @@
+<div id="CPUTemperature_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="282" data-tchmi-width-unit="%" data-tchmi-height-unit="px" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500">
+
+<div id="Maingrid" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="px" data-tchmi-left="0.0" data-tchmi-left-unit="%" data-tchmi-top="0.0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="0.0" data-tchmi-bottom="-0.0" data-tchmi-right-unit="%" data-tchmi-bottom-unit="%" data-tchmi-creator-locked="True">
+
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+[
+  {
+    "overflow": false,
+    "width": 3.0,
+    "widthMode": "Value",
+    "widthUnit": "factor"
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+[
+  {
+    "height": 6.0,
+    "heightMode": "Value",
+    "heightUnit": "factor",
+    "overflow": false
+  },
+  {
+    "height": 1,
+    "heightMode": "Value",
+    "heightUnit": "factor"
+  }
+]
+</script>
+<div id="TextGrid" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="1" data-tchmi-height-unit="px" data-tchmi-left-unit="%" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-left="0" data-tchmi-top="0.7" data-tchmi-right="0" data-tchmi-bottom="-0.7" data-tchmi-right-unit="%" data-tchmi-bottom-unit="%" data-tchmi-creator-locked="True">
+
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+[
+  {
+    "overflow": false,
+    "width": 1.0,
+    "widthMode": "Value",
+    "widthUnit": "factor"
+  },
+  {
+    "width": 1,
+    "widthMode": "Value",
+    "widthUnit": "factor"
+  },
+  {
+    "width": 1,
+    "widthMode": "Value",
+    "widthUnit": "factor"
+  },
+  {
+    "width": 1,
+    "widthMode": "Value",
+    "widthUnit": "factor"
+  }
+]
+</script>
+<div id="TextMaximumTemperature" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top="0.0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right-unit="%" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-bottom="-0.0" data-tchmi-text="Maximum" data-tchmi-text-horizontal-alignment="Right" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size-unit="%" data-tchmi-text-font-size="150" data-tchmi-creator-locked="True">
+</div>
+<div id="MaximumValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-text="%pp%stTemperatureData::nCPUMaximumTemperature%/pp%" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right-unit="%" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center">
+</div>
+</div>
+</div>
+<div id="CPUTemperatureGauge" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRadialGauge" data-tchmi-decimal-digits="1" data-tchmi-label-range="20" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-show-labels="True" data-tchmi-show-ticks="False" data-tchmi-show-value-text="True" data-tchmi-start-from-zero="True" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-unit="℃" data-tchmi-value="%pp%stTemperatureData::nCPUCurrentTemparature%/pp%" data-tchmi-label-position="Inside" data-tchmi-sub-tick-position="Outside" data-tchmi-gauge-alignment="Center" data-tchmi-base-animation-time="0" data-tchmi-is-enabled="True" data-tchmi-right-unit="%" data-tchmi-bottom-unit="%" data-tchmi-click-anywhere-to-edit="False" data-tchmi-legend-font-size="12" data-tchmi-creator-locked="True" data-tchmi-editable="False">
+<script data-tchmi-target-attribute="data-tchmi-tick-definition" type="application/json">
+{
+  "mainTickRange": 20,
+  "subTickRange": 5
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-range" type="application/json">
+[
+  {
+    "color": {
+      "color": "rgba(0, 128, 0, 1)"
+    },
+    "start": 0.0,
+    "end": "%f%%pp%stTemperatureData::nCPUTemperatureLimit%/pp%-15%/f%"
+  },
+  {
+    "color": {
+      "color": "rgba(248, 248, 0, 0.9803921)"
+    },
+    "start": "%f%%pp%stTemperatureData::nCPUTemperatureLimit%/pp%-15%/f%",
+    "end": "%pp%stTemperatureData::nCPUTemperatureLimit%/pp%"
+  },
+  {
+    "color": {
+      "color": "rgba(232, 12, 12, 1)"
+    },
+    "start": "%pp%stTemperatureData::nCPUTemperatureLimit%/pp%",
+    "end": 100.0
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-markers" type="application/json">
+[
+  {
+    "color": {
+      "color": "rgba(248, 248, 0, 0.9803921)"
+    },
+    "label": "Max",
+    "value": "%pp%stTemperatureData::nCPUMaximumTemperature%/pp%"
+  }
+]
+</script>
+</div>
+</div>

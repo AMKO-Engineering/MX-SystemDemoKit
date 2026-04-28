@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_MS4208_ETCOut" Id="{5fe9215b-ba6c-4fbb-9d61-72db53e88ac4}">
+    <Declaration><![CDATA[TYPE ST_MS4208_ETCOut :
+STRUCT
+	stEFUInputsDevice	AT%I* :	ST_EFU_Device_Inputs;	
+	stEFUUs				:	ST_EFU_Data	;
+	stEFU_Up1			:	ST_EFU_Data	;
+	stEFU_Up2			:	ST_EFU_Data	;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>
